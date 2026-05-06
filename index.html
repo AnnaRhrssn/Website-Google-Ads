@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anna Rohrssen – Google Ads Beratung | Mehr Anfragen für Solo-Selbständige</title>
+  <meta name="description" content="Ich übernehme dein Google Ads Management – damit du planbar wächst, Zeit sparst und genau weißt, was dein Budget bringt. Für Solo-Selbständige und Dienstleisterinnen." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Lenis -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <img src="logo.png" alt="AR Logo" class="pre__img" />
+    <p class="pre__logo">Anna <span>Rohrssen</span></p>
+    <div class="pre__bar-wrap"><div class="pre__bar"></div></div>
+    <p class="pre__pct">0%</p>
+  </div>
+
+  <div id="progress"></div>
+
+  <!-- ============================================================
+       NAV
+       ============================================================ -->
+  <nav id="nav">
+    <a href="#hero" class="nav__logo">
+      <img src="logo.png" alt="Anna Rohrssen Marketing Logo" class="nav__logo-img" />
+    </a>
+    <ul class="nav__links">
+      <li><a href="#services">Leistungen</a></li>
+      <li><a href="#process">Prozess</a></li>
+      <li><a href="#about">Über mich</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Kontakt</a></li>
+    </ul>
+    <a href="https://calendly.com/annarohrssen-info/erstgespraech" target="_blank" rel="noopener" class="nav__btn">
+      Erstgespräch buchen
+    </a>
+  </nav>
+
+
+  <!-- ============================================================
+       1. HERO — Aufmerksamkeit
+       Framework: Für wen · Was · Transformation · EIN CTA
+       ============================================================ -->
+  <section id="hero">
+    <div class="hero__bg" style="background-image: url('Bilder/Kai-Treffan-Fotografie-Anna-Jerchow-01.jpg');"></div>
+    <div class="hero__overlay"></div>
+
+    <div class="hero__content">
+      <div class="hero__content-inner">
+      <!-- Leistung sofort benennen -->
+      <p class="hero__eyebrow">Google Ads Management</p>
+
+      <!-- Transformation, nicht Features -->
+      <h1 class="hero__headline">
+        <span class="line">
+          <span class="word-wrap"><span class="word">Sichtbar</span></span>&nbsp;<span class="word-wrap"><span class="word">bei</span></span>&nbsp;<span class="word-wrap"><span class="word accent">Google.</span></span>
+        </span>
+        <span class="line">
+          <span class="word-wrap"><span class="word">Gefunden</span></span>&nbsp;<span class="word-wrap"><span class="word">von</span></span>&nbsp;<span class="word-wrap"><span class="word">den</span></span>&nbsp;<span class="word-wrap"><span class="word">Richtigen.</span></span>
+        </span>
+      </h1>
+
+      <!-- Zielgruppen-Badge (nicht klickbar, nur visuell) -->
+      <div class="hero__audience">Für Solo-Selbständige &amp; Dienstleisterinnen</div>
+
+      <!-- Konkrete Nutzenkommunikation -->
+      <p class="hero__sub">
+        Ich manage deine Google Ads — damit du dort sichtbar bist, wo deine Wunschkundinnen suchen, und die richtigen Anfragen reinkommen.
+      </p>
+
+      <!-- Einziger CTA -->
+      <div class="hero__ctas" style="margin-bottom:36px;">
+        <a href="https://calendly.com/annarohrssen-info/erstgespraech" target="_blank" rel="noopener" class="btn-primary">
+          <span>Kostenloses Erstgespräch buchen</span>
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Micro-Trust Signal direkt im Hero -->
+      <p style="font-size:12px; color:var(--text3); letter-spacing:0.05em;">
+        ✓ Kostenlos &nbsp;·&nbsp; ✓ Unverbindlich &nbsp;·&nbsp; ✓ Kein Verkaufsgespräch
+      </p>
+      </div><!-- /.hero__content-inner -->
+    </div>
+  </section>
+
+
+  <!-- STATS BAR -->
+  <section id="stats-bar" aria-label="Kennzahlen">
+    <div class="stats-bar__inner">
+      <div class="stat-cell">
+        <p class="stat-cell__num">100%</p>
+        <p class="stat-cell__label">Kundenzufriedenheit</p>
+      </div>
+      <div class="stat-cell">
+        <p class="stat-cell__num">1:1</p>
+        <p class="stat-cell__label">Persönliche Betreuung</p>
+      </div>
+      <div class="stat-cell">
+        <p class="stat-cell__num">24h</p>
+        <p class="stat-cell__label">Reaktionszeit</p>
+      </div>
+      <div class="stat-cell">
+        <p class="stat-cell__num">0€</p>
+        <p class="stat-cell__label">Versteckte Kosten</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       2. PROBLEM-SEKTION — Interesse / Pain Agitation
+       Framework: Besucher fühlt sich verstanden
+       ============================================================ -->
+  <section id="problem" class="section section--alt">
+    <div class="container">
+      <div class="problem__inner">
+
+        <div class="problem__left">
+          <p class="s-tag">Das kennst du bestimmt</p>
+          <span class="s-script">Kommt dir das bekannt vor?</span>
+          <h2 class="s-heading">Dein Business ist gut. <em>Nur findet es kaum jemand.</em></h2>
+          <p class="s-sub">
+            Du bist gut in dem, was du tust. Aber deine Wunschkundinnen suchen gerade bei Google — und finden jemand anderen. Nicht weil du schlechter bist. Sondern weil du nicht sichtbar bist.
+          </p>
+        </div>
+
+        <div class="pain__list" style="border-top: 1px solid var(--border);">
+          <div class="pain__item">
+            <span class="pain__num">01</span>
+            <div class="pain__body">
+              <p class="pain__title">Noch nie Ads gemacht — und keine Ahnung, ob das was für dich ist</p>
+              <p class="pain__text">Du hörst überall, dass Google Ads funktioniert. Aber ob das für dein Business und dein Budget Sinn macht — keine Ahnung. Und für Experimente auf eigene Kosten fehlt die Zeit.</p>
+            </div>
+          </div>
+          <div class="pain__item">
+            <span class="pain__num">02</span>
+            <div class="pain__body">
+              <p class="pain__title">Ads ausprobiert — aber kein gutes Gefühl dabei</p>
+              <p class="pain__text">Du hast mal reingeschaut oder Geld ausgegeben — und weißt bis heute nicht, ob es sich rentiert hat. Zu viele Einstellungen, zu viel Fachjargon, kein klares Reporting.</p>
+            </div>
+          </div>
+          <div class="pain__item">
+            <span class="pain__num">03</span>
+            <div class="pain__body">
+              <p class="pain__title">Keine Zeit, keine Energie zum Einarbeiten</p>
+              <p class="pain__text">Du führst dein Business, betreust Kunden, kümmerst dich um alles. Für einen Ads-Kurs oder stundenlange Recherche fehlt schlicht die Zeit — und der Nerv.</p>
+            </div>
+          </div>
+          <div class="pain__item">
+            <span class="pain__num">04</span>
+            <div class="pain__body">
+              <p class="pain__title">Du willst jemanden, der mitdenkt — nicht einfach nur schaltet</p>
+              <p class="pain__text">Keine anonyme Agentur, kein Autopilot. Du willst verstehen, was passiert — und jemanden, dem dein Business wirklich wichtig ist.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bridge: von Problem zu Lösung -->
+        <div class="problem__bridge">
+          <p>Genau hier setze ich an.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       3. SERVICES — Verlangen / Lösung
+       Framework: Transformation statt Features · Für-wen-Qualifizierung
+       ============================================================ -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="services__header">
+        <div>
+          <p class="s-tag">Leistungen</p>
+          <span class="s-script">Was ich für dich tue</span>
+          <h2 class="s-heading">Google Ads professionell aufgesetzt –<br><em>von Anfang bis Ende.</em></h2>
+        </div>
+        <p class="s-sub">
+          Kein Ads-Kurs, kein Stress, kein Blindflug. Ich übernehme alles – von der Strategie bis zur monatlichen Optimierung. Du weißt immer, was passiert und was es bringt.
+        </p>
+      </div>
+
+      <!-- Haupt-Angebot: Komplett-Management -->
+      <div class="services__grid" style="margin-bottom: 72px;">
+
+        <div class="svc" style="border-color: var(--border-acc); background: var(--white);">
+          <span class="svc__num"></span>
+          <div class="svc__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+          </div>
+          <span class="svc__popular">Beliebtestes Paket</span>
+          <p style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:4px;">Mein Hauptangebot</p>
+          <h3 class="svc__title">Google Ads Komplett-Management</h3>
+          <p class="svc__text">Mehr qualifizierte Anfragen – ohne dass du einen Finger an dein Konto legst. Ich übernehme Strategie, Setup, Anzeigentexte und monatliche Optimierung, inklusive Reporting, das du wirklich verstehst.</p>
+          <p style="font-size:12px;color:var(--text3);margin-bottom:16px;">4-monatiges Kennenlernangebot · danach flexibel verlängerbar · Preis nach Werbebudget</p>
+          <a href="https://calendly.com/annarohrssen-info/erstgespraech" target="_blank" rel="noopener" class="svc__link">
+            Erstgespräch buchen
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="svc">
+          <div class="svc__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </div>
+          <p style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:4px;">Im Überblick</p>
+          <h3 class="svc__title">Was du bekommst</h3>
+          <p class="svc__text">Vollständiges Konto-Setup, Keyword-Recherche, Anzeigentexte, monatliches Monitoring und transparente Reports – alles aus einer Hand. Deine Ansprechpartnerin bin immer ich. Kein anonymes Team, kein Agentur-Durchlauf.</p>
+          <a href="#for-whom" class="svc__link">
+            Passt das zu mir?
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="svc">
+          <div class="svc__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <p style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:4px;">Zielgruppe</p>
+          <h3 class="svc__title">Für wen ist das?</h3>
+          <p class="svc__text">Für Solo-Selbständige und Dienstleisterinnen, die planbar wachsen wollen – ohne sich selbst in die Technik einzuarbeiten. Du willst verstehen, was passiert, und jemanden, dem dein Business wirklich wichtig ist.</p>
+          <a href="#contact" class="svc__link">
+            Anfragen
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Weitere Angebote: Einmalige Pakete -->
+      <div class="pakete__intro">
+        <p class="s-tag">Weitere Angebote</p>
+        <h3 class="s-heading" style="font-size:clamp(22px,2.5vw,32px);">Einmalige Pakete –<br><em>für jeden Einstieg das Richtige.</em></h3>
+        <p class="s-sub" style="margin-top:12px;">Du bist noch nicht sicher oder möchtest erst testen? Diese Angebote sind einzeln buchbar – ohne Vertrag und ohne Verpflichtung.</p>
+      </div>
+
+      <div class="pakete__grid">
+
+        <div class="paket">
+          <p class="paket__price">89 €<span class="paket__price-sub">einmalig</span></p>
+          <h4 class="paket__title">Strategy Call</h4>
+          <p class="paket__desc">45 Minuten per Video-Call. Du weißt danach genau, ob und wie Google Ads für dich funktionieren kann – mit einem konkreten Aktionsplan.</p>
+          <ul class="paket__list">
+            <li>Kurzes Vorbereitungsformular vorab</li>
+            <li>Situationsanalyse &amp; Strategieempfehlung</li>
+            <li>Schriftliche Zusammenfassung per E-Mail</li>
+            <li>Für: Neueinsteiger &amp; alle, die Klarheit wollen</li>
+          </ul>
+          <a href="mailto:info@annarohrssen.de" class="paket__cta">
+            Anfragen
+            <svg width="11" height="11" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="paket">
+          <p class="paket__price">197 €<span class="paket__price-sub">einmalig</span></p>
+          <h4 class="paket__title">Google Ads Audit</h4>
+          <p class="paket__desc">Du schaltest bereits Ads, bist aber unsicher, ob dein Budget sinnvoll eingesetzt wird? Ich analysiere dein Konto und zeige dir, wo Geld verloren geht.</p>
+          <ul class="paket__list">
+            <li>Analyse von Kampagnen, Keywords &amp; Anzeigen</li>
+            <li>Prüfung des Conversion Trackings</li>
+            <li>Schriftliches Audit-PDF mit Handlungsempfehlungen</li>
+            <li>Für: Bestehende Konten &amp; zweite Meinungen</li>
+          </ul>
+          <a href="mailto:info@annarohrssen.de" class="paket__cta">
+            Anfragen
+            <svg width="11" height="11" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="paket">
+          <p class="paket__price">297 €<span class="paket__price-sub">einmalig</span></p>
+          <h4 class="paket__title">Mini-Setup</h4>
+          <p class="paket__desc">Du willst selbst loslegen, aber professionell aufgestellt sein. Du erhältst eine fertige Keyword-Strategie, Kampagnenstruktur und ausgearbeitete Anzeigentexte – zur direkten Umsetzung.</p>
+          <ul class="paket__list">
+            <li>Keyword-Recherche für 1 Thema</li>
+            <li>Kampagnenstruktur &amp; Anzeigentexte</li>
+            <li>30 Min. Übergabe-Call zur Erklärung</li>
+            <li>Für: DIY-Selbständige mit &lt; 500 €/Monat Ad Spend</li>
+          </ul>
+          <a href="mailto:info@annarohrssen.de" class="paket__cta">
+            Anfragen
+            <svg width="11" height="11" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="paket">
+          <p class="paket__price">1.190 €<span class="paket__price-sub">einmalig</span></p>
+          <h4 class="paket__title">Komplett-Setup</h4>
+          <p class="paket__desc">Du willst professionell starten – ich baue dir das vollständige Fundament: Konto, Tracking, Kampagnen, Anzeigen. Ohne dass du selbst Hand anlegst.</p>
+          <ul class="paket__list">
+            <li>Google Tag Manager &amp; Conversion Tracking</li>
+            <li>1 Kampagne, bis zu 3 Anzeigengruppen</li>
+            <li>Vollständige Keyword-Recherche &amp; Anzeigentexte</li>
+            <li>Übergabe-Call mit Erklärung aller Schritte</li>
+          </ul>
+          <a href="mailto:info@annarohrssen.de" class="paket__cta">
+            Anfragen
+            <svg width="11" height="11" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="paket paket--new">
+          <p class="paket__price">790 €<span class="paket__price-sub">einmalig</span></p>
+          <h4 class="paket__title">Landing Page</h4>
+          <p class="paket__desc">Eine gute Anzeige bringt Klicks — aber eine gute Landing Page bringt Anfragen. Ich erstelle dir eine konversionsoptimierte Seite: Text, Struktur und Umsetzung aus einer Hand.</p>
+          <ul class="paket__list">
+            <li>Konversionsoptimierter Seitentext &amp; Struktur</li>
+            <li>Technische Umsetzung, mobil optimiert</li>
+            <li>Eine Feedbackrunde zur Feinanpassung</li>
+            <li>Übergabe-Call mit Erklärung &amp; Tipps</li>
+          </ul>
+          <a href="mailto:info@annarohrssen.de" class="paket__cta">
+            Anfragen
+            <svg width="11" height="11" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Bundle-Hinweis -->
+      <div class="pakete__bundle">
+        <span class="pakete__bundle__icon">✦</span>
+        <p><strong>Tipp:</strong> Landing Page + Komplett-Setup zusammen buchen? Das Bundle kostet <strong>1.790 €</strong> statt 1.980 € — du sparst dir die doppelte Einarbeitung, weil ich beides in einem Zug aufsetze.</p>
+        <a href="mailto:info@annarohrssen.de" class="pakete__bundle__link">Bundle anfragen →</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       4. FÜR WEN / NICHT FÜR WEN — Qualifizierung
+       Framework: Spezifität schlägt Reichweite
+       ============================================================ -->
+  <section id="for-whom" class="section section--alt">
+    <div class="container">
+      <div class="forwho__intro">
+        <p class="s-tag">Für wen ist das?</p>
+        <h2 class="s-heading">Passt das<br><em>zu dir?</em></h2>
+        <p class="s-sub">Mir ist es wichtig, dass wir wirklich zusammenpassen — denn nur dann macht die Zusammenarbeit für uns beide Sinn. Keine leeren Floskeln, kein Agentur-Autopilot.</p>
+        <div class="forwho__badges">
+          <span class="forwho__badge">✓ Ehrlich</span>
+          <span class="forwho__badge">✓ Transparent</span>
+          <span class="forwho__badge">✓ Auf Augenhöhe</span>
+          <span class="forwho__badge">✓ Zuverlässig</span>
+        </div>
+      </div>
+
+      <div class="forwho__inner">
+        <div class="forwho__col">
+          <p class="forwho__heading yes">Du bist richtig hier, wenn …</p>
+          <div class="forwho__list">
+            <div class="forwho__item">
+              <span class="forwho__check y">✓</span>
+              <span>du selbstständig bist und mehr Sichtbarkeit bei Google möchtest</span>
+            </div>
+            <div class="forwho__item">
+              <span class="forwho__check y">✓</span>
+              <span>du keine Zeit hast, dich selbst in Google Ads einzuarbeiten</span>
+            </div>
+            <div class="forwho__item">
+              <span class="forwho__check y">✓</span>
+              <span>du ein Werbebudget hast und wissen willst, was es wirklich bringt</span>
+            </div>
+            <div class="forwho__item">
+              <span class="forwho__check y">✓</span>
+              <span>dir klare Kommunikation wichtiger ist als leere Floskeln</span>
+            </div>
+            <div class="forwho__item">
+              <span class="forwho__check y">✓</span>
+              <span>du verstehen willst, was mit deinem Budget passiert — nicht nur Berichte bekommst</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="forwho__col">
+          <p class="forwho__heading no">Ich bin nicht die Richtige, wenn …</p>
+          <div class="forwho__list">
+            <div class="forwho__item">
+              <span class="forwho__check n">✗</span>
+              <span>du Sofortergebnisse über Nacht erwartest</span>
+            </div>
+            <div class="forwho__item">
+              <span class="forwho__check n">✗</span>
+              <span>dein Angebot noch nicht klar definiert ist</span>
+            </div>
+            <div class="forwho__item">
+              <span class="forwho__check n">✗</span>
+              <span>du (noch) kein Budget für Werbeanzeigen einplanen kannst</span>
+            </div>
+            <div class="forwho__item">
+              <span class="forwho__check n">✗</span>
+              <span>du eine große Full-Service-Agentur mit Team suchst</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       5. PROZESS — Wie es funktioniert
+       Framework: Aufwand senken · Weg fühlt sich einfach an
+       ============================================================ -->
+  <section id="process" class="section">
+    <div class="container">
+      <div class="process__head">
+        <p class="s-tag">Mein Prozess</p>
+        <span class="s-script">So einfach geht es</span>
+        <h2 class="s-heading">Drei Schritte.<br><em>Keine Überraschungen.</em></h2>
+        <p class="s-sub">Kein komplizierter Onboarding-Prozess, keine wochenlange Wartezeit. Du weißt immer, wo wir stehen.</p>
+      </div>
+
+      <div class="process__steps">
+        <div class="step">
+          <div class="step__dot">1</div>
+          <h3 class="step__title">Kostenloses Erstgespräch</h3>
+          <p class="step__text">Wir reden 45 Minuten – ohne Verkaufsdruck. Ich verstehe dein Business, deine Ziele und sage dir ehrlich, ob und wie Google Ads für dich funktionieren kann.</p>
+        </div>
+        <div class="step">
+          <div class="step__dot">2</div>
+          <h3 class="step__title">Strategie &amp; Setup</h3>
+          <p class="step__text">Ich erstelle deine Keyword-Strategie, schreibe die Anzeigen-Texte und richte das technische Tracking ein. Du bekommst alles zur Freigabe vorgelegt.</p>
+        </div>
+        <div class="step">
+          <div class="step__dot">3</div>
+          <h3 class="step__title">Optimierung &amp; Reporting</h3>
+          <p class="step__text">Monatliches Monitoring, verständliche Reports und proaktive Anpassungen. Du weißt immer, was passiert – und was es bringt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       6. SOCIAL PROOF / TESTIMONIALS — Vertrauen
+       Framework: Konkrete Ergebnisse, keine Adjektive · VOR der About-Sektion
+       ============================================================ -->
+  <section id="testimonials" class="section section--alt">
+    <div class="container">
+      <div class="testi__head">
+        <p class="s-tag">Referenzen</p>
+        <span class="s-script">Was Kundinnen sagen</span>
+        <h2 class="s-heading">Worte, die mir<br><em>viel bedeuten.</em></h2>
+      </div>
+
+      <div class="testi__grid">
+
+        <div class="testi">
+          <div class="testi__stars" aria-label="5 Sterne">★★★★★</div>
+          <blockquote class="testi__text">
+            „Anna wurde mir genau zum richtigen Zeitpunkt empfohlen, als ich mich als Ernährungsberaterin selbstständig gemacht habe. Die Zusammenarbeit war von Anfang an eine echte Bereicherung. Mit ihrer herzlichen, empathischen Art schafft sie sofort Vertrauen und bringt eine angenehme Leichtigkeit in den Prozess. Besonders überzeugt haben mich die professionelle Umsetzung meiner Google-Ads-Kampagne und Landingpage, ihre hohe Erreichbarkeit sowie die transparente, strukturierte Zusammenarbeit durch regelmäßige Reportings. Ich bin rundum zufrieden und kann Anna uneingeschränkt empfehlen – fachlich stark und menschlich wunderbar."
+          </blockquote>
+          <div class="testi__author">
+            <div class="testi__av" aria-hidden="true">D</div>
+            <div>
+              <p class="testi__name">Daniela Müller</p>
+              <p class="testi__role">Ernährungsberatung Lebensgefühl</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi">
+          <div class="testi__stars" aria-label="5 Sterne">★★★★★</div>
+          <blockquote class="testi__text">
+            „Ich bin sehr froh, Anna als Google-Ads-Expertin gefunden zu haben. Die Zusammenarbeit ist angenehm, offen, strukturiert und strategisch durchdacht. Anna versteht unser Business genau und entwickelt individuelle Lösungen statt Standardansätze. Klare Empfehlung für alle, die Google Ads professionell aufbauen möchten."
+          </blockquote>
+          <div class="testi__author">
+            <div class="testi__av" aria-hidden="true">D</div>
+            <div>
+              <p class="testi__name">Daniela Leopold-Kreisl</p>
+              <p class="testi__role">Gründerin grillMODUL</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- TRUST BAR (Vertrauen-Signale) -->
+  <div class="trust-bar" aria-hidden="true">
+    <div class="trust-bar__track">
+      <span class="trust-bar__item"><span class="dot">✦</span>Kurze Vertragslaufzeit</span>
+      <span class="trust-bar__item"><span class="dot">✦</span>Persönliche Betreuung</span>
+      <span class="trust-bar__item"><span class="dot">✦</span>Transparentes Reporting</span>
+      <span class="trust-bar__item"><span class="dot">✦</span>Kein Fachjargon</span>
+      <span class="trust-bar__item"><span class="dot">✦</span>Erstgespräch kostenlos</span>
+      <span class="trust-bar__item"><span class="dot">✦</span>Auf Augenhöhe</span>
+      <span class="trust-bar__item"><span class="dot">✦</span>Kurze Vertragslaufzeit</span>
+      <span class="trust-bar__item"><span class="dot">✦</span>Persönliche Betreuung</span>
+      <span class="trust-bar__item"><span class="dot">✦</span>Transparentes Reporting</span>
+      <span class="trust-bar__item"><span class="dot">✦</span>Kein Fachjargon</span>
+      <span class="trust-bar__item"><span class="dot">✦</span>Erstgespräch kostenlos</span>
+      <span class="trust-bar__item"><span class="dot">✦</span>Auf Augenhöhe</span>
+    </div>
+  </div>
+
+
+
+
+  <!-- ============================================================
+       7. ABOUT — Kurz · Credibility-fokussiert · Kundenorientiert
+       Framework: "Was habe ich davon?" kommt vor "Wer bist du?"
+       ============================================================ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about__inner">
+
+        <div class="about__visual">
+          <div class="about__img">
+            <img
+              src="Bilder/anna-portrait.jpg"
+              alt="Anna Rohrssen – Google Ads Beraterin"
+              loading="lazy"
+            />
+          </div>
+          <div class="about__badge">
+            <strong>1:1</strong>
+            <span>persönliche Betreuung – keine Agentur</span>
+          </div>
+        </div>
+
+        <div class="about__body">
+          <p class="s-tag">Warum mit mir arbeiten</p>
+          <span class="s-script">Eine Person, kein System</span>
+          <h2 class="s-heading">Keine Agentur. Keine Zwischenschicht.<br><em>Nur ich.</em></h2>
+
+          <!-- Kundennutzen zuerst, Ich-Aspekte kurz -->
+          <p class="about__text">
+            Bei einer Agentur bist du eine Kundennummer. Bei mir bist du die einzige Person, die ich in dieser Stunde betreue. <strong>Ich kenne dein Business, deine Zahlen und deine Ziele – persönlich und direkt.</strong>
+          </p>
+          <p class="about__text">
+            Ich bin Anna, Google Ads Beraterin aus Norddeutschland. Als Mutter und Selbständige weiß ich: <strong>Zeit ist dein wertvollstes Gut.</strong> Deswegen bekommst du von mir keine aufgeblähten Reports und kein Fachjargon – sondern klare Kommunikation und messbare Ergebnisse.
+          </p>
+
+          <div class="about__values">
+            <div class="val"><div class="val-dot"></div><span>Start mit 4-monatigem Kennenlernangebot, danach flexibel 3-monatige Verlängerungen</span></div>
+            <div class="val"><div class="val-dot"></div><span>Du verstehst immer, was mit deinem Budget passiert</span></div>
+            <div class="val"><div class="val-dot"></div><span>Ich sage dir auch, wenn etwas nicht für dich passt</span></div>
+          </div>
+
+          <a href="https://calendly.com/annarohrssen-info/erstgespraech" target="_blank" rel="noopener" class="btn-primary" style="margin-top:8px;width:fit-content;">
+            <span>Kostenloses Erstgespräch buchen</span>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       8. FAQ — Einwände entkräften
+       Framework: Jeder Besucher hat Einwände · Starke Seiten beantworten sie
+       ============================================================ -->
+  <section id="faq" class="section section--alt">
+    <div class="container">
+      <div class="faq__head">
+        <p class="s-tag">Häufige Fragen</p>
+        <span class="s-script">Deine Fragen</span>
+        <h2 class="s-heading">Ehrliche Antworten.<br><em>Direkt und klar.</em></h2>
+      </div>
+
+      <div class="faq__list">
+
+        <details class="faq__item">
+          <summary class="faq__q">Lohnt sich Google Ads überhaupt für mein Business?</summary>
+          <div class="faq__answer">
+            <p>Das hängt von deinem Angebot, deiner Zielgruppe und deinem Budget ab. Deswegen starten wir immer mit einem <strong>kostenlosen Erstgespräch</strong> – ich sage dir ehrlich, ob Google Ads für dich Sinn macht. Kein Verkaufsgespräch, kein Druck. Wenn ich denke, dass es nicht passt, sage ich das auch.</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__q">Ich habe noch nie mit Google Ads gearbeitet – ist das ein Problem?</summary>
+          <div class="faq__answer">
+            <p>Überhaupt nicht. <strong>Die meisten meiner Kundinnen kommen ohne Ads-Erfahrung.</strong> Ich erkläre dir alles, was relevant ist – in verständlicher Sprache, ohne Fachwissen. Du musst keine Expertin werden. Das ist mein Job.</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__q">Was kostet Google Ads Management bei dir?</summary>
+          <div class="faq__answer">
+            <p>Meine Preise richten sich nach deinem Bedarf und Werbebudget. Im <strong>ersten Gespräch lernen wir uns kennen</strong> – ich verstehe dein Business und sage dir, ob Google Ads für dich passt. Ein konkretes Angebot mit Budget-Empfehlung bekommst du danach im zweiten Gespräch. Keine versteckten Kosten, alles transparent.</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__q">Wie schnell sehe ich erste Ergebnisse?</summary>
+          <div class="faq__answer">
+            <p>Google Ads kann schnell Sichtbarkeit erzeugen – erste Klicks kommen oft schon kurz nach dem Start. Wie sich das auf deine Anfragen auswirkt, hängt aber von vielen Faktoren ab: deinem Angebot, deiner Website und deiner Zielgruppe. <strong>Ich mache keine Versprechen, die ich nicht halten kann</strong> – dafür arbeite ich sorgfältig, damit dein Budget sinnvoll eingesetzt wird.</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__q">Wie läuft die Zusammenarbeit ab – gibt es einen Vertrag?</summary>
+          <div class="faq__answer">
+            <p>Wir starten mit einem <strong>4-monatigen Kennenlernangebot</strong> – damit du siehst, wie ich arbeite, und ich dein Business wirklich kennenlernen kann. Danach verlängert sich die Zusammenarbeit flexibel um jeweils 3 Monate. Kein Kleingedrucktes, keine Überraschungen.</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__q">Was passiert mit meinem Ads-Konto, wenn wir aufhören?</summary>
+          <div class="faq__answer">
+            <p><strong>Das Konto gehört dir – immer.</strong> Ich arbeite in deinem eigenen Google Ads Konto, nicht in meinem. Wenn unsere Zusammenarbeit endet, hast du weiterhin vollen Zugriff auf alle Daten, Kampagnen und die gesamte bisherige Arbeit.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       9. CTA — Eine Aktion. Klar. Dringend. Risikofrei.
+       Framework: Eine Seite, eine Aktion · Preis kommt nach dem Wert
+       ============================================================ -->
+  <section id="cta">
+    <div class="cta__bg-img" style="background-image: url('Bilder/Kai-Treffan-Fotografie-Anna-Jerchow-11.jpg');"></div>
+    <div class="cta__body">
+      <p class="s-tag" style="justify-content:center;color:#e8a882;">Nächster Schritt</p>
+      <span class="cta__script">Bereit loszulegen?</span>
+      <h2 class="cta__h">Dein kostenloses<br>Erstgespräch.</h2>
+      <p class="cta__sub">
+        45 Minuten. Kein Pitch, kein Druck. Wir schauen gemeinsam, ob und wie Google Ads für dein Business Sinn macht – und du weißt danach genau, was dein nächster Schritt ist.
+      </p>
+      <div class="cta__btns">
+        <a href="https://calendly.com/annarohrssen-info/erstgespraech" target="_blank" rel="noopener" class="btn-primary-inv">
+          <span>Jetzt Erstgespräch buchen</span>
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+      <!-- Risiko-Reduktion direkt unter dem CTA -->
+      <p class="cta__note">✓ Kostenlos &nbsp;·&nbsp; ✓ Unverbindlich &nbsp;·&nbsp; ✓ Kein Verkaufsgespräch &nbsp;·&nbsp; ✓ 4-Monats-Kennenlernangebot</p>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CONTACT
+       ============================================================ -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="contact__inner">
+
+        <div class="contact__info">
+          <div>
+            <p class="s-tag">Kontakt</p>
+            <span class="s-script">Noch unsicher? Kein Problem</span>
+            <h2 class="s-heading">Schreib mir.<br><em>Ich melde mich.</em></h2>
+            <p class="s-sub">Innerhalb von 24 Stunden — ich persönlich, nicht ein Callcenter.</p>
+          </div>
+
+          <div class="contact__list">
+            <div class="c-item">
+              <div class="c-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <a href="mailto:info@annarohrssen.de">info@annarohrssen.de</a>
+            </div>
+            <div class="c-item">
+              <div class="c-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/>
+                </svg>
+              </div>
+              <a href="https://www.instagram.com/ads.byanna/" target="_blank" rel="noopener">Instagram – @ads.byanna</a>
+            </div>
+            <div class="c-item">
+              <div class="c-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+                </svg>
+              </div>
+              <a href="https://linkedin.com/in/annarohrssen" target="_blank" rel="noopener">LinkedIn – Anna Rohrssen</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact__cta-box">
+          <p class="contact__cta-label">Direkt Termin buchen</p>
+          <h3 class="contact__cta-heading">45 Minuten.<br>Kostenlos. Unverbindlich.</h3>
+          <p class="contact__cta-text">Such dir einfach einen Termin aus, der dir passt – ich freue mich auf das Gespräch.</p>
+          <a href="https://calendly.com/annarohrssen-info/erstgespraech" target="_blank" rel="noopener" class="btn-primary">
+            <span>Jetzt Termin buchen</span>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <p style="font-size:11px;color:var(--text3);margin-top:14px;">✓ Kostenlos &nbsp;·&nbsp; ✓ Kein Verkaufsgespräch &nbsp;·&nbsp; ✓ 4-Monats-Kennenlernangebot</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer__inner">
+
+      <!-- Obere Zeile: Navigation links, Links rechts -->
+      <div class="footer__top">
+        <div class="footer__col">
+          <p class="f-nav-heading">Navigation</p>
+          <ul class="f-menu">
+            <li><a href="#services">Leistungen</a></li>
+            <li><a href="#process">Prozess</a></li>
+            <li><a href="#about">Über mich</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="f-nav-heading">Social Media</p>
+          <ul class="f-menu">
+            <li><a href="https://www.instagram.com/ads.byanna/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://linkedin.com/in/annarohrssen" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="f-nav-heading">Rechtliches</p>
+          <ul class="f-menu">
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Untere Zeile: Logo + Name + Copyright zentriert -->
+      <div class="footer__bottom">
+        <a href="#hero" class="f-logo">
+          <img src="logo.png" alt="AR Logo" />
+          <span class="f-logo-text">Anna <span>Rohrssen</span></span>
+        </a>
+        <p class="f-copy">© 2025 Anna Rohrssen · Google Ads Beratung</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

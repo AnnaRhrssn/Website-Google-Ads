@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impressum – Anna Rohrssen Marketing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body { cursor: auto; }
+    #c-dot, #c-ring { display: none; }
+    #progress { display: none; }
+    .legal-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      padding: 18px 48px;
+      background: rgba(243,239,233,0.95);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 100;
+    }
+    .legal-nav .logo {
+      display: flex; align-items: center; gap: 10px;
+      font-family: var(--serif);
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .legal-nav .logo img { height: 36px; width: 36px; object-fit: contain; }
+    .legal-nav .logo span { color: var(--accent); }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      text-decoration: none;
+      transition: gap .25s;
+    }
+    .back-btn:hover { gap: 13px; }
+    @media(max-width:768px) {
+      .legal-nav { padding: 14px 24px; }
+      .legal-page { padding: 0 24px; margin-top: 96px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="legal-nav">
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="AR Logo" />
+      Anna <span>Rohrssen</span>
+    </a>
+    <a href="index.html" class="back-btn">
+      <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M13 8H3M3 8L7 4M3 8L7 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Zurück zur Website
+    </a>
+  </nav>
+
+  <main class="legal-page">
+    <h1>Impressum</h1>
+    <p class="legal-sub">Angaben gemäß § 5 TMG</p>
+
+    <h2>Angaben zur Person</h2>
+    <p>
+      Anna Rohrßen<br>
+      Markt 6<br>
+      25524 Itzehoe<br>
+      Deutschland
+    </p>
+
+    <h2>Kontakt</h2>
+    <p>
+      Tel.: <a href="tel:+4917620477100">017620477100</a><br>
+      E-Mail: <a href="mailto:info@annarohrssen.de">info@annarohrssen.de</a>
+    </p>
+
+    <h2>Umsatzsteuer</h2>
+    <p>
+      Umsatzsteuerbefreit (Kleinunternehmerregelung gemäß § 19 UStG)
+    </p>
+
+    <h2>Streitschlichtung</h2>
+    <p>
+      Wir sind zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle weder verpflichtet noch bereit.
+    </p>
+
+    <h2>Haftungshinweis</h2>
+    <p>
+      Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
+    </p>
+  </main>
+
+</body>
+</html>
