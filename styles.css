@@ -1789,6 +1789,8 @@ button { cursor: pointer; border: none; background: none; }
 
   /* "Auf Augenhöhe" auf Mobile ausblenden */
   .forwho__badge:nth-child(3) { display: none; }
+  .forwho__badge { font-size: 9px; padding: 5px 12px; letter-spacing: 0.06em; }
+  .forwho__badges { gap: 6px; }
 
   /* CTA einzeilig */
   .btn-primary, .btn-ghost {
