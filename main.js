@@ -37,6 +37,48 @@ function initNav() {
     onEnter:     () => nav.classList.add('scrolled'),
     onLeaveBack: () => nav.classList.remove('scrolled'),
   });
+
+  const hamburger = document.querySelector('.nav__hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (!hamburger || !mobileMenu) return;
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = hamburger.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+    if (isOpen) {
+      mobileMenu.style.display = 'flex';
+      requestAnimationFrame(() => mobileMenu.classList.add('open'));
+      document.body.style.overflow = 'hidden';
+    } else {
+      mobileMenu.classList.remove('open');
+      setTimeout(() => { mobileMenu.style.display = 'none'; }, 300);
+      document.body.style.overflow = '';
+    }
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', false);
+      mobileMenu.classList.remove('open');
+      setTimeout(() => { mobileMenu.style.display = 'none'; }, 300);
+      document.body.style.overflow = '';
+    });
+  });
+}
+
+/* ============================================
+   PAKETE FLIP CARDS (Mobile)
+   ============================================ */
+function initPaketFlip() {
+  const isMobile = () => window.innerWidth <= 768;
+  document.querySelectorAll('.paket').forEach(paket => {
+    paket.addEventListener('click', e => {
+      if (!isMobile()) return;
+      if (e.target.closest('a')) return;
+      paket.classList.toggle('is-open');
+    });
+  });
 }
 
 /* ============================================
@@ -89,7 +131,7 @@ function runPageAnimations() {
 
   /* ---- Section headings (nicht in #about oder #problem – dort separat animiert) ---- */
   document.querySelectorAll('.s-heading, .s-script').forEach(el => {
-    if (el.closest('#about') || el.closest('#problem') || el.closest('#cta')) return;
+    if (el.closest('#about') || el.closest('#problem') || el.closest('#cta') || el.closest('.pakete__intro')) return;
     gsap.from(el, {
       scrollTrigger: { trigger: el, start: 'top 88%', once: true },
       opacity: 0, y: 32,
@@ -99,7 +141,7 @@ function runPageAnimations() {
 
   /* ---- Tags & Subs (nicht in #about, #problem oder #cta) ---- */
   document.querySelectorAll('.s-tag, .s-sub').forEach(el => {
-    if (el.closest('#about') || el.closest('#problem') || el.closest('#cta')) return;
+    if (el.closest('#about') || el.closest('#problem') || el.closest('#cta') || el.closest('.pakete__intro')) return;
     gsap.from(el, {
       scrollTrigger: { trigger: el, start: 'top 90%', once: true },
       opacity: 0, y: 20,
@@ -263,4 +305,5 @@ function runPageAnimations() {
 document.addEventListener('DOMContentLoaded', () => {
   initPreloader();
   initNav();
+  initPaketFlip();
 });

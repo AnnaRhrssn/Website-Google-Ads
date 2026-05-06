@@ -49,7 +49,24 @@
     <a href="https://calendly.com/annarohrssen-info/erstgespraech" target="_blank" rel="noopener" class="nav__btn">
       Erstgespräch buchen
     </a>
+    <button class="nav__hamburger" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#services">Leistungen</a></li>
+      <li><a href="#process">Prozess</a></li>
+      <li><a href="#about">Über mich</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Kontakt</a></li>
+    </ul>
+    <a href="https://calendly.com/annarohrssen-info/erstgespraech" target="_blank" rel="noopener" class="btn-primary">
+      Erstgespräch buchen
+    </a>
+  </div>
 
 
   <!-- ============================================================
@@ -76,7 +93,7 @@
       </h1>
 
       <!-- Zielgruppen-Badge (nicht klickbar, nur visuell) -->
-      <div class="hero__audience">Für Solo-Selbständige &amp; Dienstleisterinnen</div>
+      <div class="hero__audience">Für Frauen mit eigenem Business</div>
 
       <!-- Konkrete Nutzenkommunikation -->
       <p class="hero__sub">
@@ -269,93 +286,148 @@
       <div class="pakete__grid">
 
         <div class="paket">
-          <p class="paket__price">89 €<span class="paket__price-sub">einmalig</span></p>
-          <h4 class="paket__title">Strategy Call</h4>
-          <p class="paket__desc">45 Minuten per Video-Call. Du weißt danach genau, ob und wie Google Ads für dich funktionieren kann – mit einem konkreten Aktionsplan.</p>
-          <ul class="paket__list">
-            <li>Kurzes Vorbereitungsformular vorab</li>
-            <li>Situationsanalyse &amp; Strategieempfehlung</li>
-            <li>Schriftliche Zusammenfassung per E-Mail</li>
-            <li>Für: Neueinsteiger &amp; alle, die Klarheit wollen</li>
-          </ul>
-          <a href="mailto:info@annarohrssen.de" class="paket__cta">
-            Anfragen
-            <svg width="11" height="11" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
+          <div class="paket__inner">
+            <div class="paket__front">
+              <div class="paket__front-text">
+                <p class="paket__price">89 €<span class="paket__price-sub">einmalig</span></p>
+                <h4 class="paket__title">Strategy Call</h4>
+              </div>
+              <span class="paket__flip-hint">↓</span>
+            </div>
+            <div class="paket__back">
+              <div class="paket__back-inner">
+                <p class="paket__desc">45 Minuten per Video-Call. Du weißt danach genau, ob und wie Google Ads für dich funktionieren kann – mit einem konkreten Aktionsplan.</p>
+                <ul class="paket__list">
+                  <li>Kurzes Vorbereitungsformular vorab</li>
+                  <li>Situationsanalyse &amp; Strategieempfehlung</li>
+                  <li>Schriftliche Zusammenfassung per E-Mail</li>
+                  <li>Für: Neueinsteiger &amp; alle, die Klarheit wollen</li>
+                </ul>
+                <a href="mailto:info@annarohrssen.de" class="paket__cta">
+                  Anfragen
+                  <svg width="11" height="11" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="paket">
-          <p class="paket__price">197 €<span class="paket__price-sub">einmalig</span></p>
-          <h4 class="paket__title">Google Ads Audit</h4>
-          <p class="paket__desc">Du schaltest bereits Ads, bist aber unsicher, ob dein Budget sinnvoll eingesetzt wird? Ich analysiere dein Konto und zeige dir, wo Geld verloren geht.</p>
-          <ul class="paket__list">
-            <li>Analyse von Kampagnen, Keywords &amp; Anzeigen</li>
-            <li>Prüfung des Conversion Trackings</li>
-            <li>Schriftliches Audit-PDF mit Handlungsempfehlungen</li>
-            <li>Für: Bestehende Konten &amp; zweite Meinungen</li>
-          </ul>
-          <a href="mailto:info@annarohrssen.de" class="paket__cta">
-            Anfragen
-            <svg width="11" height="11" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
+          <div class="paket__inner">
+            <div class="paket__front">
+              <div class="paket__front-text">
+                <p class="paket__price">197 €<span class="paket__price-sub">einmalig</span></p>
+                <h4 class="paket__title">Google Ads Audit</h4>
+              </div>
+              <span class="paket__flip-hint">↓</span>
+            </div>
+            <div class="paket__back">
+              <div class="paket__back-inner">
+                <p class="paket__desc">Du schaltest bereits Ads, bist aber unsicher, ob dein Budget sinnvoll eingesetzt wird? Ich analysiere dein Konto und zeige dir, wo Geld verloren geht.</p>
+                <ul class="paket__list">
+                  <li>Analyse von Kampagnen, Keywords &amp; Anzeigen</li>
+                  <li>Prüfung des Conversion Trackings</li>
+                  <li>Schriftliches Audit-PDF mit Handlungsempfehlungen</li>
+                  <li>Für: Bestehende Konten &amp; zweite Meinungen</li>
+                </ul>
+                <a href="mailto:info@annarohrssen.de" class="paket__cta">
+                  Anfragen
+                  <svg width="11" height="11" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="paket">
-          <p class="paket__price">297 €<span class="paket__price-sub">einmalig</span></p>
-          <h4 class="paket__title">Mini-Setup</h4>
-          <p class="paket__desc">Du willst selbst loslegen, aber professionell aufgestellt sein. Du erhältst eine fertige Keyword-Strategie, Kampagnenstruktur und ausgearbeitete Anzeigentexte – zur direkten Umsetzung.</p>
-          <ul class="paket__list">
-            <li>Keyword-Recherche für 1 Thema</li>
-            <li>Kampagnenstruktur &amp; Anzeigentexte</li>
-            <li>30 Min. Übergabe-Call zur Erklärung</li>
-            <li>Für: DIY-Selbständige mit &lt; 500 €/Monat Ad Spend</li>
-          </ul>
-          <a href="mailto:info@annarohrssen.de" class="paket__cta">
-            Anfragen
-            <svg width="11" height="11" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
+          <div class="paket__inner">
+            <div class="paket__front">
+              <div class="paket__front-text">
+                <p class="paket__price">297 €<span class="paket__price-sub">einmalig</span></p>
+                <h4 class="paket__title">Mini-Setup</h4>
+              </div>
+              <span class="paket__flip-hint">↓</span>
+            </div>
+            <div class="paket__back">
+              <div class="paket__back-inner">
+                <p class="paket__desc">Du willst selbst loslegen, aber professionell aufgestellt sein. Du erhältst eine fertige Keyword-Strategie, Kampagnenstruktur und ausgearbeitete Anzeigentexte – zur direkten Umsetzung.</p>
+                <ul class="paket__list">
+                  <li>Keyword-Recherche für 1 Thema</li>
+                  <li>Kampagnenstruktur &amp; Anzeigentexte</li>
+                  <li>30 Min. Übergabe-Call zur Erklärung</li>
+                  <li>Für: DIY-Selbständige mit &lt; 500 €/Monat Ad Spend</li>
+                </ul>
+                <a href="mailto:info@annarohrssen.de" class="paket__cta">
+                  Anfragen
+                  <svg width="11" height="11" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="paket">
-          <p class="paket__price">1.190 €<span class="paket__price-sub">einmalig</span></p>
-          <h4 class="paket__title">Komplett-Setup</h4>
-          <p class="paket__desc">Du willst professionell starten – ich baue dir das vollständige Fundament: Konto, Tracking, Kampagnen, Anzeigen. Ohne dass du selbst Hand anlegst.</p>
-          <ul class="paket__list">
-            <li>Google Tag Manager &amp; Conversion Tracking</li>
-            <li>1 Kampagne, bis zu 3 Anzeigengruppen</li>
-            <li>Vollständige Keyword-Recherche &amp; Anzeigentexte</li>
-            <li>Übergabe-Call mit Erklärung aller Schritte</li>
-          </ul>
-          <a href="mailto:info@annarohrssen.de" class="paket__cta">
-            Anfragen
-            <svg width="11" height="11" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
+          <div class="paket__inner">
+            <div class="paket__front">
+              <div class="paket__front-text">
+                <p class="paket__price">1.190 €<span class="paket__price-sub">einmalig</span></p>
+                <h4 class="paket__title">Komplett-Setup</h4>
+              </div>
+              <span class="paket__flip-hint">↓</span>
+            </div>
+            <div class="paket__back">
+              <div class="paket__back-inner">
+                <p class="paket__desc">Du willst professionell starten – ich baue dir das vollständige Fundament: Konto, Tracking, Kampagnen, Anzeigen. Ohne dass du selbst Hand anlegst.</p>
+                <ul class="paket__list">
+                  <li>Google Tag Manager &amp; Conversion Tracking</li>
+                  <li>1 Kampagne, bis zu 3 Anzeigengruppen</li>
+                  <li>Vollständige Keyword-Recherche &amp; Anzeigentexte</li>
+                  <li>Übergabe-Call mit Erklärung aller Schritte</li>
+                </ul>
+                <a href="mailto:info@annarohrssen.de" class="paket__cta">
+                  Anfragen
+                  <svg width="11" height="11" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="paket paket--new">
-          <p class="paket__price">790 €<span class="paket__price-sub">einmalig</span></p>
-          <h4 class="paket__title">Landing Page</h4>
-          <p class="paket__desc">Eine gute Anzeige bringt Klicks — aber eine gute Landing Page bringt Anfragen. Ich erstelle dir eine konversionsoptimierte Seite: Text, Struktur und Umsetzung aus einer Hand.</p>
-          <ul class="paket__list">
-            <li>Konversionsoptimierter Seitentext &amp; Struktur</li>
-            <li>Technische Umsetzung, mobil optimiert</li>
-            <li>Eine Feedbackrunde zur Feinanpassung</li>
-            <li>Übergabe-Call mit Erklärung &amp; Tipps</li>
-          </ul>
-          <a href="mailto:info@annarohrssen.de" class="paket__cta">
-            Anfragen
-            <svg width="11" height="11" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
+          <div class="paket__inner">
+            <div class="paket__front">
+              <div class="paket__front-text">
+                <p class="paket__price">790 €<span class="paket__price-sub">einmalig</span></p>
+                <h4 class="paket__title">Landing Page</h4>
+              </div>
+              <span class="paket__flip-hint">↓</span>
+            </div>
+            <div class="paket__back">
+              <div class="paket__back-inner">
+                <p class="paket__desc">Eine gute Anzeige bringt Klicks — aber eine gute Landing Page bringt Anfragen. Ich erstelle dir eine konversionsoptimierte Seite: Text, Struktur und Umsetzung aus einer Hand.</p>
+                <ul class="paket__list">
+                  <li>Konversionsoptimierter Seitentext &amp; Struktur</li>
+                  <li>Technische Umsetzung, mobil optimiert</li>
+                  <li>Eine Feedbackrunde zur Feinanpassung</li>
+                  <li>Übergabe-Call mit Erklärung &amp; Tipps</li>
+                </ul>
+                <a href="mailto:info@annarohrssen.de" class="paket__cta">
+                  Anfragen
+                  <svg width="11" height="11" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
