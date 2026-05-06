@@ -1512,7 +1512,7 @@ button { cursor: pointer; border: none; background: none; }
 }
 .forwho__badges {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 10px;
   margin-top: 28px;
 }
