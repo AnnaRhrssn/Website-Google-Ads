@@ -91,6 +91,7 @@ button { cursor: pointer; border: none; background: none; }
   opacity: 0;
   transform: translateY(18px);
 }
+.pre__logo { color: var(--accent); }
 .pre__logo span { color: var(--accent); }
 .pre__bar-wrap {
   width: min(240px,55vw);
@@ -1303,7 +1304,7 @@ button { cursor: pointer; border: none; background: none; }
   letter-spacing: 0.07em;
   color: var(--text);
 }
-.f-logo-text span { color: var(--accent); }
+.f-logo-text span { color: inherit; }
 .f-copy { font-size: 12px; color: var(--text3); }
 .f-menu { display: flex; flex-direction: column; gap: 10px; list-style: none; }
 .f-menu a {
