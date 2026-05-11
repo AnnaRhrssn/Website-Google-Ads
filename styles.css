@@ -712,6 +712,14 @@ button { cursor: pointer; border: none; background: none; }
 .paket__front, .paket__back {
   display: contents;
 }
+/* back-inner ist direktes flex-Kind von paket__inner (wegen display:contents).
+   flex:1 lässt es den Restplatz füllen, damit desc/list/cta darin ausgerichtet werden. */
+.paket__back-inner {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 10px;
+}
 .paket__flip-hint { display: none; }
 .paket::after {
   content: '';
@@ -1765,7 +1773,7 @@ button { cursor: pointer; border: none; background: none; }
     grid-template-rows: 0fr;
     transition: grid-template-rows 0.35s ease;
   }
-  .paket__back-inner { overflow: hidden; }
+  .paket__back-inner { overflow: hidden; display: block; flex: initial; gap: 0; }
   .paket.is-open .paket__back { grid-template-rows: 1fr; }
   .paket__back-inner > * { padding-top: 14px; }
   .paket__flip-hint {
