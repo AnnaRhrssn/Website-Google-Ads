@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://annarhrssn.github.io/Website-Google-Ads/sitemap.xml
