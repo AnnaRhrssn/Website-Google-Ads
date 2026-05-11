@@ -4,9 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Impressum – Anna Rohrssen Marketing</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Google Fonts nur laden wenn Einwilligung bereits erteilt wurde -->
+  <script>
+    if (localStorage.getItem('ar-cookie-consent') === 'accepted') {
+      var pc1 = document.createElement('link'); pc1.rel = 'preconnect'; pc1.href = 'https://fonts.googleapis.com'; document.head.appendChild(pc1);
+      var pc2 = document.createElement('link'); pc2.rel = 'preconnect'; pc2.href = 'https://fonts.gstatic.com'; pc2.crossOrigin = 'anonymous'; document.head.appendChild(pc2);
+      var lnk = document.createElement('link'); lnk.rel = 'stylesheet'; lnk.href = 'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700&family=Montserrat:wght@300;400;500;600&display=swap'; document.head.appendChild(lnk);
+    }
+  </script>
   <link rel="stylesheet" href="styles.css" />
   <style>
     body { cursor: auto; }

@@ -300,9 +300,54 @@ function runPageAnimations() {
 }
 
 /* ============================================
+   COOKIE BANNER + GOOGLE FONTS
+   ============================================ */
+function loadGoogleFonts() {
+  if (document.getElementById('gf-loaded')) return;
+  const pc1 = document.createElement('link');
+  pc1.rel = 'preconnect';
+  pc1.href = 'https://fonts.googleapis.com';
+  const pc2 = document.createElement('link');
+  pc2.rel = 'preconnect';
+  pc2.href = 'https://fonts.gstatic.com';
+  pc2.crossOrigin = 'anonymous';
+  const lnk = document.createElement('link');
+  lnk.id = 'gf-loaded';
+  lnk.rel = 'stylesheet';
+  lnk.href = 'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Montserrat:wght@300;400;500;600&display=swap';
+  document.head.appendChild(pc1);
+  document.head.appendChild(pc2);
+  document.head.appendChild(lnk);
+}
+
+function initCookieBanner() {
+  const banner = document.getElementById('cookie-banner');
+  if (!banner) return;
+
+  const consent = localStorage.getItem('ar-cookie-consent');
+  if (consent === 'accepted') { loadGoogleFonts(); return; }
+  if (consent === 'declined') return;
+
+  // Kurze Verzögerung damit Preloader zuerst sichtbar ist
+  setTimeout(() => banner.classList.add('visible'), 800);
+
+  banner.querySelector('.cookie-banner__accept').addEventListener('click', () => {
+    localStorage.setItem('ar-cookie-consent', 'accepted');
+    loadGoogleFonts();
+    banner.classList.remove('visible');
+  });
+
+  banner.querySelector('.cookie-banner__decline').addEventListener('click', () => {
+    localStorage.setItem('ar-cookie-consent', 'declined');
+    banner.classList.remove('visible');
+  });
+}
+
+/* ============================================
    BOOT
    ============================================ */
 document.addEventListener('DOMContentLoaded', () => {
+  initCookieBanner();
   initPreloader();
   initNav();
   initPaketFlip();

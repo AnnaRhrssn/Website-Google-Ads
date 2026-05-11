@@ -4,9 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Datenschutz – Anna Rohrssen Marketing</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Google Fonts nur laden wenn Einwilligung bereits erteilt wurde -->
+  <script>
+    if (localStorage.getItem('ar-cookie-consent') === 'accepted') {
+      var pc1 = document.createElement('link'); pc1.rel = 'preconnect'; pc1.href = 'https://fonts.googleapis.com'; document.head.appendChild(pc1);
+      var pc2 = document.createElement('link'); pc2.rel = 'preconnect'; pc2.href = 'https://fonts.gstatic.com'; pc2.crossOrigin = 'anonymous'; document.head.appendChild(pc2);
+      var lnk = document.createElement('link'); lnk.rel = 'stylesheet'; lnk.href = 'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700&family=Montserrat:wght@300;400;500;600&display=swap'; document.head.appendChild(lnk);
+    }
+  </script>
   <link rel="stylesheet" href="styles.css" />
   <style>
     body { cursor: auto; }
@@ -71,7 +76,7 @@
 
   <main class="legal-page">
     <h1>Datenschutzerklärung</h1>
-    <p class="legal-sub">Zuletzt aktualisiert: 2025 · Copyright © 2025, IT-Recht-Kanzlei</p>
+    <p class="legal-sub">Zuletzt aktualisiert: Mai 2025</p>
 
     <h2>1) Einleitung und Kontaktdaten des Verantwortlichen</h2>
     <p>
@@ -94,62 +99,55 @@
       <li>Verwendete IP-Adresse (ggf. in anonymisierter Form)</li>
     </ul>
     <p>
-      Die Verarbeitung erfolgt gemäß Art. 6 Abs. 1 lit. f DSGVO auf Basis unseres berechtigten Interesses an der Verbesserung der Stabilität und Funktionalität unserer Website.
+      Die Verarbeitung erfolgt gemäß Art. 6 Abs. 1 lit. f DSGVO auf Basis unseres berechtigten Interesses an der Verbesserung der Stabilität und Funktionalität unserer Website. Die Daten werden gelöscht, sobald sie für den Zweck ihrer Erhebung nicht mehr erforderlich sind, spätestens nach 7 Tagen.
     </p>
     <p>
       2.2 Diese Website nutzt aus Sicherheitsgründen und zum Schutz der Übertragung personenbezogener Daten eine SSL- bzw. TLS-Verschlüsselung. Du kannst eine verschlüsselte Verbindung an der Zeichenfolge „https://" und dem Schloss-Symbol in deiner Browserzeile erkennen.
     </p>
 
-    <h2>3) Hosting &amp; Content-Delivery-Network</h2>
+    <h2>3) Hosting</h2>
     <p>
-      Für das Hosting unserer Website und die Darstellung der Seiteninhalte nutzen wir einen Anbieter, der seine Leistungen selbst oder durch ausgewählte Sub-Unternehmer ausschließlich auf Servern innerhalb der Europäischen Union erbringt. Sämtliche auf unserer Website erhobenen Daten werden auf diesen Servern verarbeitet.
+      Diese Website wird über den Dienst <strong>GitHub Pages</strong> des Anbieters GitHub, Inc. (ein Unternehmen der Microsoft Corporation), 88 Colin P Kelly Jr Street, San Francisco, CA 94107, USA, gehostet. Beim Abruf unserer Website werden daher technische Daten (u.a. deine IP-Adresse) an Server von GitHub übertragen, die sich in den USA befinden können. Die Datenübermittlung in die USA erfolgt auf Grundlage der Standardvertragsklauseln der EU-Kommission gemäß Art. 46 Abs. 2 lit. c DSGVO. Weitere Informationen findest du in der Datenschutzerklärung von GitHub: <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement</a>
     </p>
 
-    <h2>4) Cookies</h2>
+    <h2>4) Cookies und lokaler Speicher</h2>
     <p>
-      Um den Besuch unserer Website attraktiv zu gestalten und die Nutzung bestimmter Funktionen zu ermöglichen, verwenden wir Cookies. Teilweise werden diese Cookies nach Schließen des Browsers automatisch wieder gelöscht (sog. „Session-Cookies"), teilweise verbleiben diese Cookies länger auf deinem Endgerät (sog. „persistente Cookies"). Du kannst deinen Browser so einstellen, dass du über das Setzen von Cookies informiert wirst und einzeln über deren Annahme entscheiden kannst.
+      Diese Website verwendet ausschließlich technisch notwendige Cookies bzw. den lokalen Speicher (localStorage) des Browsers, um deine Cookie-Einwilligung zu speichern. Es werden keine Tracking- oder Analyse-Cookies gesetzt. Die Speicherung deiner Einwilligungsentscheidung erfolgt gemäß Art. 6 Abs. 1 lit. f DSGVO auf Basis unseres berechtigten Interesses an einem rechtskonformen Einwilligungsmanagement.
+    </p>
+    <p>
+      Du kannst die Speicherung im localStorage jederzeit über die Einstellungen deines Browsers löschen oder verhindern.
     </p>
 
     <h2>5) Kontaktaufnahme</h2>
 
-    <p><strong>5.1 Calendly</strong></p>
+    <p><strong>5.1 Terminbuchung über Calendly</strong></p>
     <p>
-      Für die Bereitstellung einer Online-Terminbuchungsfunktion nutzen wir die Dienste des folgenden Anbieters: Calendly, LLC, BB&amp;T Tower, 271 17th St NW, Atlanta, GA 30363, USA. Zum Zwecke der Terminvergabe werden gemäß Art. 6 Abs. 1 lit. b DSGVO Vor- und Zuname sowie Mailadresse erhoben und an den Anbieter übermittelt. Für Datenübermittlungen in die USA hat sich der Anbieter dem EU-US-Datenschutzrahmen (EU-US Data Privacy Framework) angeschlossen.
+      Für die Bereitstellung einer Online-Terminbuchungsfunktion verweisen wir auf den externen Dienst Calendly (Calendly, LLC, BB&amp;T Tower, 271 17th St NW, Atlanta, GA 30363, USA). Wenn du über den verlinkten Calendly-Button einen Termin buchst, wirst du auf die Website von Calendly weitergeleitet. Dabei verarbeitet Calendly mindestens deinen Namen und deine E-Mail-Adresse gemäß Art. 6 Abs. 1 lit. b DSGVO. Für Datenübermittlungen in die USA hat sich Calendly dem EU-US-Datenschutzrahmen (EU-US Data Privacy Framework) angeschlossen. Weitere Informationen findest du in der Datenschutzerklärung von Calendly: <a href="https://calendly.com/legal/privacy-notice" target="_blank" rel="noopener">https://calendly.com/legal/privacy-notice</a>
     </p>
 
-    <p><strong>5.2 WhatsApp Business</strong></p>
+    <p><strong>5.2 Kontakt per E-Mail</strong></p>
     <p>
-      Wir bieten dir die Möglichkeit, mit uns über den Nachrichtendienst WhatsApp der WhatsApp Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland, in Kontakt zu treten. Hierfür verwenden wir die sog. „Business-Version" von WhatsApp. Sofern du uns per WhatsApp kontaktierst, speichern und verwenden wir die von dir genutzte Mobilfunknummer sowie deinen Namen gemäß Art. 6 Abs. 1 lit. b DSGVO zur Bearbeitung deines Anliegens. Bitte beachte die Datenschutzhinweise von WhatsApp: <a href="https://www.whatsapp.com/legal/?eea=1#privacypolicy" target="_blank" rel="noopener">https://www.whatsapp.com/legal</a>
+      Wenn du per E-Mail Kontakt mit uns aufnimmst, werden die übermittelten personenbezogenen Daten (mindestens deine E-Mail-Adresse sowie ggf. dein Name und dein Anliegen) gespeichert, um deine Anfrage zu bearbeiten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Deine Daten werden nach abschließender Bearbeitung deiner Anfrage gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
     </p>
 
-    <p><strong>5.3 Kontaktformular</strong></p>
+    <h2>6) Eingebundene externe Dienste</h2>
+
+    <p><strong>6.1 Google Fonts (einwilligungsbasiert)</strong></p>
     <p>
-      Im Rahmen der Kontaktaufnahme mit uns (z.B. per Kontaktformular oder E-Mail) werden personenbezogene Daten erhoben. Diese Daten werden ausschließlich zum Zweck der Beantwortung deines Anliegens gespeichert und verwendet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Deine Daten werden nach abschließender Bearbeitung deiner Anfrage gelöscht.
+      Diese Website lädt Schriftarten des Dienstes Google Fonts des Anbieters Google Ireland Limited, Gordon House, 4 Barrow St, Dublin, D04 E5W5, Irland, ausschließlich nach deiner ausdrücklichen Einwilligung. Ohne Einwilligung werden systemnahe Schriften verwendet; es erfolgt keine Verbindung zu Google-Servern. Wenn du einwilligst, wird deine IP-Adresse an Google-Server (ggf. in den USA) übermittelt. Die Verarbeitung erfolgt dann auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO. Du kannst deine Einwilligung jederzeit widerrufen, indem du die gespeicherten Daten in deinem Browser-localStorage löschst (Schlüssel: <code>ar-cookie-consent</code>). Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a>
     </p>
 
-    <h2>6) Retargeting / Remarketing und Conversion-Tracking – Meta Pixel</h2>
+    <p><strong>6.2 GSAP und Lenis (Animationsbibliotheken)</strong></p>
     <p>
-      Innerhalb unseres Online-Angebots verwenden wir den Dienst „Meta Pixel" des folgenden Anbieters: Meta Platforms Ireland Limited, 4 Grand Canal Quare, Dublin 2, Irland. Mit dem „Meta Pixel" kann nachvollzogen werden, ob Nutzer nach dem Klick auf eine Werbeanzeige auf unsere Website weitergeleitet wurden und welche Ausführungshandlungen sie dort tätigen. Alle oben beschriebenen Verarbeitungen werden nur dann vollzogen, wenn du uns gemäß Art. 6 Abs. 1 lit. a DSGVO dazu deine ausdrückliche Einwilligung erteilt hast.
+      Für Animationen auf dieser Website werden die JavaScript-Bibliotheken GSAP (GreenSock Animation Platform) und Lenis über externe Content-Delivery-Networks (CDNs) geladen: cdnjs.cloudflare.com (Cloudflare, Inc., USA) und cdn.jsdelivr.net (Prospect One, Polen / USA). Dabei wird technisch bedingt deine IP-Adresse an die jeweiligen Server übermittelt. Diese Bibliotheken setzen keine Cookies und dienen ausschließlich der technischen Darstellung der Website. Die Verarbeitung erfolgt gemäß Art. 6 Abs. 1 lit. f DSGVO auf Basis unseres berechtigten Interesses an einer funktionsfähigen Darstellung der Website.
     </p>
 
-    <h2>7) Seitenfunktionalitäten</h2>
-
-    <p><strong>7.1 Google Sign-In</strong></p>
+    <h2>7) Cookie-Einwilligungsmanagement</h2>
     <p>
-      Auf unserer Website stellen wir eine Single-Sign-On-Funktion des folgenden Anbieters bereit: Google Ireland Limited, Gordon House, 4 Barrow St, Dublin, D04 E5W5, Irland. Für Datenübermittlungen in die USA hat sich der Anbieter dem EU-US-Datenschutzrahmen angeschlossen. Weitere Hinweise: <a href="https://business.safety.google/intl/de/privacy/" target="_blank" rel="noopener">https://business.safety.google/intl/de/privacy/</a>
+      Diese Website nutzt ein eigenes, selbst implementiertes Cookie-Banner zur Einholung deiner Einwilligung für einwilligungspflichtige Dienste (derzeit: Google Fonts). Deine Entscheidung wird im localStorage deines Browsers gespeichert (kein Cookie im klassischen Sinne, kein serverseitiger Zugriff). Die Speicherung erfolgt gemäß Art. 6 Abs. 1 lit. f DSGVO auf Basis unseres berechtigten Interesses an einem rechtskonformen Einwilligungsmanagement. Du kannst deine Einwilligung jederzeit durch Löschen des localStorage-Eintrags zurücksetzen.
     </p>
 
-    <p><strong>7.2 Google reCAPTCHA</strong></p>
-    <p>
-      Auf dieser Website verwenden wir den CAPTCHA-Dienst von Google Ireland Limited. Der Dienst prüft, ob eine Eingabe durch eine natürliche Person oder automatisiert erfolgt, und blockiert Spam sowie automatisierte Schadzugriffe. Sofern Verarbeitungen auf Basis von Cookies erfolgen, werden diese nur gesetzt, wenn du deine ausdrückliche Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO erteilt hast.
-    </p>
-
-    <h2>8) Cookie-Consent-Tool</h2>
-    <p>
-      Diese Website nutzt zur Einholung wirksamer Nutzereinwilligungen für einwilligungspflichtige Cookies ein sog. „Cookie-Consent-Tool". Das Tool setzt technisch notwendige Cookies, um deine Cookie-Präferenzen zu speichern. Die Verarbeitung erfolgt gemäß Art. 6 Abs. 1 lit. f DSGVO auf Basis unseres berechtigten Interesses an einem rechtskonformen Einwilligungsmanagement.
-    </p>
-
-    <h2>9) Rechte des Betroffenen</h2>
+    <h2>8) Rechte des Betroffenen</h2>
     <p>Das geltende Datenschutzrecht gewährt dir gegenüber uns die nachstehenden Betroffenenrechte:</p>
     <ul>
       <li>Auskunftsrecht gemäß Art. 15 DSGVO</li>
@@ -159,15 +157,15 @@
       <li>Recht auf Unterrichtung gemäß Art. 19 DSGVO</li>
       <li>Recht auf Datenübertragbarkeit gemäß Art. 20 DSGVO</li>
       <li>Recht auf Widerruf erteilter Einwilligungen gemäß Art. 7 Abs. 3 DSGVO</li>
-      <li>Recht auf Beschwerde gemäß Art. 77 DSGVO</li>
+      <li>Recht auf Beschwerde bei der zuständigen Aufsichtsbehörde gemäß Art. 77 DSGVO</li>
     </ul>
     <p>
-      <strong>Widerspruchsrecht:</strong> Wenn wir deine personenbezogenen Daten auf Basis einer Interessenabwägung verarbeiten, hast du das jederzeitige Recht, aus Gründen deiner besonderen Situation Widerspruch gegen diese Verarbeitung einzulegen.
+      <strong>Widerspruchsrecht:</strong> Wenn wir deine personenbezogenen Daten auf Basis einer Interessenabwägung verarbeiten, hast du das jederzeitige Recht, aus Gründen deiner besonderen Situation Widerspruch gegen diese Verarbeitung einzulegen. Im Falle von Direktwerbung steht dir ein generelles Widerspruchsrecht ohne Angabe von Gründen zu.
     </p>
 
-    <h2>10) Dauer der Speicherung personenbezogener Daten</h2>
+    <h2>9) Dauer der Speicherung personenbezogener Daten</h2>
     <p>
-      Die Dauer der Speicherung von personenbezogenen Daten bemisst sich anhand der jeweiligen Rechtsgrundlage, am Verarbeitungszweck und – sofern einschlägig – zusätzlich anhand der jeweiligen gesetzlichen Aufbewahrungsfrist (z.B. handels- und steuerrechtliche Aufbewahrungsfristen). Gespeicherte personenbezogene Daten werden gelöscht, wenn sie für die Zwecke, für die sie erhoben wurden, nicht mehr notwendig sind.
+      Die Dauer der Speicherung von personenbezogenen Daten bemisst sich anhand der jeweiligen Rechtsgrundlage, am Verarbeitungszweck und – sofern einschlägig – zusätzlich anhand der jeweiligen gesetzlichen Aufbewahrungsfrist (z.B. handels- und steuerrechtliche Aufbewahrungsfristen von 6 bzw. 10 Jahren). Gespeicherte personenbezogene Daten werden gelöscht, wenn sie für die Zwecke, für die sie erhoben wurden, nicht mehr notwendig sind und keine gesetzlichen Aufbewahrungspflichten der Löschung entgegenstehen.
     </p>
   </main>
 

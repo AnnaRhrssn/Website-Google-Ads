@@ -1802,3 +1802,99 @@ button { cursor: pointer; border: none; background: none; }
 @media (max-width: 480px) {
   .hero__ctas { flex-direction: row; flex-wrap: nowrap; gap: 10px; }
 }
+
+
+/* ============================================
+   COOKIE BANNER
+   ============================================ */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -8px 32px rgba(93,91,91,0.13);
+  padding: 20px 48px;
+  transform: translateY(100%);
+  transition: transform 0.35s var(--ease);
+}
+.cookie-banner.visible {
+  transform: translateY(0);
+}
+.cookie-banner__inner {
+  max-width: var(--mw);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.cookie-banner__text { flex: 1; }
+.cookie-banner__title {
+  font-family: var(--serif);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 5px;
+}
+.cookie-banner__text p {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.65;
+  font-weight: 300;
+}
+.cookie-banner__text a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+.cookie-banner__actions {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+  align-items: center;
+}
+.cookie-banner__accept {
+  background: var(--accent);
+  color: #fff;
+  padding: 11px 26px;
+  border-radius: 100px;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 1.5px solid var(--accent);
+  transition: background .2s, box-shadow .2s;
+}
+.cookie-banner__accept:hover {
+  background: var(--accent2);
+  border-color: var(--accent2);
+  box-shadow: 0 6px 20px rgba(213,77,1,0.25);
+}
+.cookie-banner__decline {
+  background: transparent;
+  color: var(--text2);
+  padding: 11px 22px;
+  border-radius: 100px;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 1.5px solid var(--border);
+  transition: border-color .2s, color .2s;
+}
+.cookie-banner__decline:hover {
+  color: var(--text);
+  border-color: var(--text2);
+}
+@media (max-width: 768px) {
+  .cookie-banner { padding: 18px 20px; }
+  .cookie-banner__inner { flex-direction: column; gap: 16px; align-items: flex-start; }
+  .cookie-banner__actions { width: 100%; }
+  .cookie-banner__accept,
+  .cookie-banner__decline { flex: 1; text-align: center; justify-content: center; }
+}
