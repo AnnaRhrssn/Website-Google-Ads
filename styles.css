@@ -764,7 +764,6 @@ button { cursor: pointer; border: none; background: none; }
   color: var(--text2);
   line-height: 1.68;
   font-weight: 300;
-  flex: 1;
 }
 .paket__list {
   list-style: none;

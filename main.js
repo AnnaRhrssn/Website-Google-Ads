@@ -106,7 +106,7 @@ function initPreloader() {
       gsap.timeline()
         .to(pre, { opacity: 0, duration: 0.65, ease: 'power2.inOut', delay: 0.1 })
         .set(pre, { display: 'none' })
-        .add(() => runPageAnimations());
+        .add(() => { runPageAnimations(); equalizeDescHeights(); });
     },
   });
 }
@@ -298,6 +298,23 @@ function runPageAnimations() {
     ease: 'power3.out',
   });
 }
+
+/* ============================================
+   PAKET-KARTEN: Beschreibungen auf gleiche Höhe
+   ============================================ */
+function equalizeDescHeights() {
+  const descs = document.querySelectorAll('.pakete__grid .paket__desc');
+  descs.forEach(d => d.style.minHeight = '');
+  if (window.innerWidth <= 768) return;
+  const max = Math.max(...Array.from(descs).map(d => d.offsetHeight));
+  descs.forEach(d => d.style.minHeight = max + 'px');
+}
+
+let resizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(equalizeDescHeights, 120);
+});
 
 /* ============================================
    COOKIE BANNER + GOOGLE FONTS
