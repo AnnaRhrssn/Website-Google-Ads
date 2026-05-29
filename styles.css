@@ -7,9 +7,9 @@
 /* ---- Variables ---- */
 :root {
   /* Aus Aktuelles Design.docx */
-  --bg:          #f3efe9;   /* Haupthintergrund: warmes Creme */
-  --bg2:         #ede9e1;   /* Sekundärer Hintergrund */
-  --bg3:         #e8e3db;   /* Karten-Hintergrund */
+  --bg:          #fafaf8;   /* Haupthintergrund: fast Weiß */
+  --bg2:         #f3efe9;   /* Sekundärer Hintergrund: warmes Creme */
+  --bg3:         #ede9e1;   /* Karten-Hintergrund */
   --white:       #ffffff;
 
   --text:        #5d5b5b;   /* Hauptschrift */
@@ -294,7 +294,7 @@ button { cursor: pointer; border: none; background: none; }
   font-family: var(--serif);
   font-size: clamp(34px,4.1vw,62px);
   line-height: 1.12;
-  font-weight: 700;
+  font-weight: 300;
   letter-spacing: -0.02em;
   color: var(--text);
   margin-bottom: 28px;
@@ -536,7 +536,7 @@ button { cursor: pointer; border: none; background: none; }
   font-family: var(--serif);
   font-size: clamp(32px,4.5vw,56px);
   line-height: 1.1;
-  font-weight: 700;
+  font-weight: 300;
   letter-spacing: -0.02em;
   color: var(--text);
   margin-bottom: 16px;
@@ -906,7 +906,7 @@ button { cursor: pointer; border: none; background: none; }
 .step__title {
   font-family: var(--serif);
   font-size: 19px;
-  font-weight: 600;
+  font-weight: 300;
   margin-bottom: 12px;
   color: var(--text);
 }
@@ -1104,7 +1104,7 @@ button { cursor: pointer; border: none; background: none; }
 .cta__h {
   font-family: var(--serif);
   font-size: clamp(34px,4.8vw,62px);
-  font-weight: 700;
+  font-weight: 300;
   line-height: 1.1;
   letter-spacing: -0.02em;
   color: var(--white);
@@ -1216,7 +1216,7 @@ button { cursor: pointer; border: none; background: none; }
   font-size: clamp(22px, 2.4vw, 32px);
   color: var(--text);
   line-height: 1.25;
-  font-weight: 600;
+  font-weight: 300;
   margin: 0;
 }
 .contact__cta-text {
