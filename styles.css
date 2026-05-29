@@ -1018,7 +1018,7 @@ button { cursor: pointer; border: none; background: none; }
   display: grid;
   grid-template-columns: repeat(2,1fr);
   gap: 24px;
-  align-items: start;
+  align-items: stretch;
 }
 .testi {
   background: var(--white);
