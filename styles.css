@@ -1116,27 +1116,28 @@ button { cursor: pointer; border: none; background: none; }
 
 /* Modal */
 .testi-modal {
-  border: 1px solid var(--border);
-  border-radius: var(--r-lg);
-  padding: 0;
-  max-width: 520px;
-  width: 90vw;
-  background: var(--white);
-  box-shadow: var(--shadow-lg);
-  outline: none;
+  display: none;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-}
-.testi-modal::backdrop {
-  background: rgba(93,91,91,0.25);
+  inset: 0;
+  z-index: 9000;
+  background: rgba(93,91,91,0.35);
   backdrop-filter: blur(4px);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 .testi-modal__inner {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-lg);
   padding: 40px 36px 32px;
   position: relative;
+  width: 100%;
+  max-width: 520px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
 }
 .testi-modal__close {
   position: absolute;
@@ -1165,11 +1166,9 @@ button { cursor: pointer; border: none; background: none; }
   font-family: var(--sans);
   font-weight: 300;
   margin-bottom: 28px;
-  max-height: 50vh;
+  flex: 1;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  overscroll-behavior: contain;
-  touch-action: pan-y;
   padding-right: 6px;
 }
 .testi-modal__text::-webkit-scrollbar { width: 3px; }
