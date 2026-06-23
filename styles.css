@@ -1122,9 +1122,6 @@ button { cursor: pointer; border: none; background: none; }
   z-index: 9000;
   background: rgba(93,91,91,0.35);
   backdrop-filter: blur(4px);
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
 }
 .testi-modal__inner {
   background: var(--white);
@@ -1132,12 +1129,15 @@ button { cursor: pointer; border: none; background: none; }
   border-radius: var(--r-lg);
   box-shadow: var(--shadow-lg);
   padding: 40px 36px 32px;
-  position: relative;
-  width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
   max-width: 520px;
   max-height: 80vh;
   overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
+  z-index: 9001;
 }
 .testi-modal__close {
   position: absolute;
