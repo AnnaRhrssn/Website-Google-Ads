@@ -990,6 +990,9 @@
   <script src="main.js"></script>
   <script>
     var _scrollY = 0;
+
+    function preventScroll(e) { e.preventDefault(); }
+
     function openModal(id) {
       var modal = document.getElementById(id);
       _scrollY = window.scrollY;
@@ -997,7 +1000,9 @@
       document.body.style.top = '-' + _scrollY + 'px';
       document.body.style.width = '100%';
       modal.style.display = 'flex';
+      document.addEventListener('touchmove', preventScroll, { passive: false });
     }
+
     function closeModal(id) {
       var modal = document.getElementById(id);
       modal.style.display = 'none';
@@ -1005,12 +1010,18 @@
       document.body.style.top = '';
       document.body.style.width = '';
       window.scrollTo(0, _scrollY);
+      document.removeEventListener('touchmove', preventScroll);
     }
+
     document.addEventListener('DOMContentLoaded', function() {
       document.querySelectorAll('.testi-modal').forEach(function(modal) {
         modal.addEventListener('click', function(e) {
           if (e.target === modal) closeModal(modal.id);
         });
+        var txt = modal.querySelector('.testi-modal__text');
+        txt.addEventListener('touchmove', function(e) {
+          e.stopPropagation();
+        }, { passive: true });
       });
     });
   </script>
