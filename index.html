@@ -597,7 +597,7 @@
           <blockquote class="testi__text">
             „Anna wurde mir genau zum richtigen Zeitpunkt empfohlen, als ich mich als Ernährungsberaterin selbstständig gemacht habe. Die Zusammenarbeit war von Anfang an eine echte Bereicherung …"
           </blockquote>
-          <button class="testi__more-btn" onclick="document.getElementById('modal-daniela-m').showModal()">Vollständige Bewertung lesen →</button>
+          <button class="testi__more-btn" onclick="openModal('modal-daniela-m')">Vollständige Bewertung lesen →</button>
           <div class="testi__author">
             <div class="testi__av" aria-hidden="true">D</div>
             <div>
@@ -613,7 +613,7 @@
           <blockquote class="testi__text">
             „Ich bin sehr froh, Anna als Google-Ads-Expertin gefunden zu haben. Die Zusammenarbeit ist angenehm, offen, strukturiert und strategisch durchdacht …"
           </blockquote>
-          <button class="testi__more-btn" onclick="document.getElementById('modal-daniela-l').showModal()">Vollständige Bewertung lesen →</button>
+          <button class="testi__more-btn" onclick="openModal('modal-daniela-l')">Vollständige Bewertung lesen →</button>
           <div class="testi__author">
             <div class="testi__av" aria-hidden="true">D</div>
             <div>
@@ -629,7 +629,7 @@
           <blockquote class="testi__text">
             „Die Zusammenarbeit mit Anna war für mein Brautmodengeschäft eine echte Bereicherung. Anna hat mich über ein Jahr hinweg im Bereich Google Ads begleitet …"
           </blockquote>
-          <button class="testi__more-btn" onclick="document.getElementById('modal-ariane').showModal()">Vollständige Bewertung lesen →</button>
+          <button class="testi__more-btn" onclick="openModal('modal-ariane')">Vollständige Bewertung lesen →</button>
           <div class="testi__author">
             <div class="testi__av" aria-hidden="true">A</div>
             <div>
@@ -644,7 +644,7 @@
   </section>
 
   <!-- Modal: Daniela Müller -->
-  <dialog id="modal-daniela-m" class="testi-modal" onclick="if(event.target===this)this.close()">
+  <dialog id="modal-daniela-m" class="testi-modal">
     <div class="testi-modal__inner">
       <button class="testi-modal__close" onclick="document.getElementById('modal-daniela-m').close()" aria-label="Schließen">✕</button>
       <div class="testi-modal__stars" aria-label="5 Sterne">★★★★★</div>
@@ -662,7 +662,7 @@
   </dialog>
 
   <!-- Modal: Daniela Leopold-Kreisl -->
-  <dialog id="modal-daniela-l" class="testi-modal" onclick="if(event.target===this)this.close()">
+  <dialog id="modal-daniela-l" class="testi-modal">
     <div class="testi-modal__inner">
       <button class="testi-modal__close" onclick="document.getElementById('modal-daniela-l').close()" aria-label="Schließen">✕</button>
       <div class="testi-modal__stars" aria-label="5 Sterne">★★★★★</div>
@@ -680,7 +680,7 @@
   </dialog>
 
   <!-- Modal: Ariane Nickusch -->
-  <dialog id="modal-ariane" class="testi-modal" onclick="if(event.target===this)this.close()">
+  <dialog id="modal-ariane" class="testi-modal">
     <div class="testi-modal__inner">
       <button class="testi-modal__close" onclick="document.getElementById('modal-ariane').close()" aria-label="Schließen">✕</button>
       <div class="testi-modal__stars" aria-label="5 Sterne">★★★★★</div>
@@ -988,5 +988,22 @@
   </div>
 
   <script src="main.js"></script>
+  <script>
+    function openModal(id) {
+      var modal = document.getElementById(id);
+      modal.showModal();
+      document.body.style.overflow = 'hidden';
+      modal.addEventListener('close', function() {
+        document.body.style.overflow = '';
+      }, { once: true });
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.testi-modal').forEach(function(modal) {
+        modal.addEventListener('click', function(e) {
+          if (e.target === modal) modal.close();
+        });
+      });
+    });
+  </script>
 </body>
 </html>
