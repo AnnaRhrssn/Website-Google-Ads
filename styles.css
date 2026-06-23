@@ -1690,8 +1690,22 @@ button { cursor: pointer; border: none; background: none; }
   .contact__inner { grid-template-columns: 1fr; gap: 52px; }
   .process__steps { grid-template-columns: 1fr; gap: 44px; }
   .process__steps::before { display: none; }
-  .testi__grid,
-  .testi__grid--3 { grid-template-columns: 1fr; }
+  .testi__grid { grid-template-columns: 1fr; }
+  .testi__grid--3 {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding-bottom: 16px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .testi__grid--3::-webkit-scrollbar { display: none; }
+  .testi__grid--3 .testi {
+    flex: 0 0 85vw;
+    max-width: 360px;
+    scroll-snap-align: start;
+  }
   .pain__list { grid-template-columns: 1fr; }
   .problem__left { position: static; }
   .forwho__inner { grid-template-columns: 1fr; gap: 24px; }
