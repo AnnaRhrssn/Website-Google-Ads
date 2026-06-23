@@ -1128,7 +1128,6 @@ button { cursor: pointer; border: none; background: none; }
   border: 1px solid var(--border);
   border-radius: var(--r-lg);
   box-shadow: var(--shadow-lg);
-  padding: 40px 36px 32px;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -1137,7 +1136,10 @@ button { cursor: pointer; border: none; background: none; }
   max-width: 520px;
   max-height: 80vh;
   overflow-y: auto;
+  overflow-x: hidden;
   z-index: 9001;
+  padding: 40px 36px 32px;
+  box-sizing: border-box;
 }
 .testi-modal__close {
   position: absolute;
