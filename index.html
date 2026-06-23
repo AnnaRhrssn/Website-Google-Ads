@@ -991,7 +991,14 @@
   <script>
     var _scrollY = 0;
 
-    function preventScroll(e) { e.preventDefault(); }
+    function preventScroll(e) {
+      var el = e.target;
+      while (el) {
+        if (el.classList && el.classList.contains('testi-modal__text')) return;
+        el = el.parentElement;
+      }
+      e.preventDefault();
+    }
 
     function openModal(id) {
       var modal = document.getElementById(id);
@@ -1018,10 +1025,6 @@
         modal.addEventListener('click', function(e) {
           if (e.target === modal) closeModal(modal.id);
         });
-        var txt = modal.querySelector('.testi-modal__text');
-        txt.addEventListener('touchmove', function(e) {
-          e.stopPropagation();
-        }, { passive: true });
       });
     });
   </script>
