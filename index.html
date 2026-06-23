@@ -991,14 +991,15 @@
   <script>
     var _scrollY = 0;
 
-    function preventScroll(e) {
-      var el = e.target;
+    function isInText(el) {
       while (el) {
-        if (el.classList && el.classList.contains('testi-modal__text')) return;
+        if (el.classList && el.classList.contains('testi-modal__text')) return true;
         el = el.parentElement;
       }
-      e.preventDefault();
+      return false;
     }
+    function preventScroll(e) { if (!isInText(e.target)) e.preventDefault(); }
+    function preventWheel(e)  { if (!isInText(e.target)) e.preventDefault(); }
 
     function openModal(id) {
       var modal = document.getElementById(id);
@@ -1008,16 +1009,18 @@
       document.body.style.width = '100%';
       modal.style.display = 'flex';
       document.addEventListener('touchmove', preventScroll, { passive: false });
+      document.addEventListener('wheel', preventWheel, { passive: false });
     }
 
     function closeModal(id) {
-      var modal = document.getElementById(id);
+      var modal = document.getElementById(id);  
       modal.style.display = 'none';
       document.body.style.position = '';
       document.body.style.top = '';
       document.body.style.width = '';
       window.scrollTo(0, _scrollY);
       document.removeEventListener('touchmove', preventScroll);
+      document.removeEventListener('wheel', preventWheel);
     }
 
     document.addEventListener('DOMContentLoaded', function() {
