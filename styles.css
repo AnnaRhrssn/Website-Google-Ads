@@ -1047,6 +1047,8 @@ button { cursor: pointer; border: none; background: none; }
   padding: 44px;
   position: relative;
   transition: border-color .38s, transform .38s var(--ease), box-shadow .38s;
+  display: flex;
+  flex-direction: column;
 }
 .testi::before {
   content: '\201C';
@@ -1078,6 +1080,7 @@ button { cursor: pointer; border: none; background: none; }
   font-family: var(--sans);
   font-weight: 300;
   margin-bottom: 32px;
+  flex: 1;
 }
 .testi__author { display: flex; align-items: center; gap: 14px; }
 .testi__av {
@@ -1104,6 +1107,7 @@ button { cursor: pointer; border: none; background: none; }
   font-weight: 600;
   cursor: pointer;
   padding: 0;
+  margin-top: auto;
   margin-bottom: 28px;
   display: block;
   transition: opacity .2s;
@@ -1120,6 +1124,11 @@ button { cursor: pointer; border: none; background: none; }
   background: var(--white);
   box-shadow: var(--shadow-lg);
   outline: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
 }
 .testi-modal::backdrop {
   background: rgba(93,91,91,0.25);
@@ -1156,9 +1165,11 @@ button { cursor: pointer; border: none; background: none; }
   font-family: var(--sans);
   font-weight: 300;
   margin-bottom: 28px;
-  max-height: 55vh;
-  overflow-y: auto;
+  max-height: 50vh;
+  overflow-y: scroll;
+  overscroll-behavior: contain;
   padding-right: 6px;
+  -webkit-overflow-scrolling: touch;
 }
 .testi-modal__text::-webkit-scrollbar { width: 3px; }
 .testi-modal__text::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
