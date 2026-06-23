@@ -1020,6 +1020,9 @@ button { cursor: pointer; border: none; background: none; }
   gap: 24px;
   align-items: stretch;
 }
+.testi__grid--3 {
+  grid-template-columns: repeat(3,1fr);
+}
 .testi {
   background: var(--white);
   border: 1px solid var(--border);
@@ -1075,6 +1078,70 @@ button { cursor: pointer; border: none; background: none; }
 }
 .testi__name { font-size: 14px; font-weight: 600; color: var(--text); }
 .testi__role { font-size: 12px; color: var(--text3); }
+
+.testi__more-btn {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 28px;
+  display: block;
+  transition: opacity .2s;
+}
+.testi__more-btn:hover { opacity: .7; }
+
+/* Modal */
+.testi-modal {
+  border: none;
+  border-radius: var(--r-lg);
+  padding: 0;
+  max-width: 680px;
+  width: 90vw;
+  box-shadow: 0 24px 80px rgba(0,0,0,.18);
+}
+.testi-modal::backdrop {
+  background: rgba(0,0,0,.45);
+  backdrop-filter: blur(3px);
+}
+.testi-modal__inner {
+  padding: 52px 48px 44px;
+  position: relative;
+}
+.testi-modal__close {
+  position: absolute;
+  top: 18px; right: 22px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: var(--text3);
+  cursor: pointer;
+  line-height: 1;
+  transition: color .2s;
+}
+.testi-modal__close:hover { color: var(--text); }
+.testi-modal__stars {
+  color: var(--accent);
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+.testi-modal__text {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text);
+  font-style: italic;
+  font-family: var(--sans);
+  font-weight: 300;
+  margin-bottom: 32px;
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+.testi-modal__text p { margin-bottom: 14px; }
+.testi-modal__text p:last-child { margin-bottom: 0; }
 
 
 /* ============================================
@@ -1623,7 +1690,8 @@ button { cursor: pointer; border: none; background: none; }
   .contact__inner { grid-template-columns: 1fr; gap: 52px; }
   .process__steps { grid-template-columns: 1fr; gap: 44px; }
   .process__steps::before { display: none; }
-  .testi__grid { grid-template-columns: 1fr; }
+  .testi__grid,
+  .testi__grid--3 { grid-template-columns: 1fr; }
   .pain__list { grid-template-columns: 1fr; }
   .problem__left { position: static; }
   .forwho__inner { grid-template-columns: 1fr; gap: 24px; }

@@ -589,13 +589,15 @@
         <h2 class="s-heading">Worte, die mir<br><em>viel bedeuten.</em></h2>
       </div>
 
-      <div class="testi__grid">
+      <div class="testi__grid testi__grid--3">
 
+        <!-- Karte 1: Daniela Müller -->
         <div class="testi">
           <div class="testi__stars" aria-label="5 Sterne">★★★★★</div>
           <blockquote class="testi__text">
-            „Anna wurde mir genau zum richtigen Zeitpunkt empfohlen, als ich mich als Ernährungsberaterin selbstständig gemacht habe. Die Zusammenarbeit war von Anfang an eine echte Bereicherung. Mit ihrer herzlichen, empathischen Art schafft sie sofort Vertrauen und bringt eine angenehme Leichtigkeit in den Prozess. Besonders überzeugt haben mich die professionelle Umsetzung meiner Google-Ads-Kampagne und Landingpage, ihre hohe Erreichbarkeit sowie die transparente, strukturierte Zusammenarbeit durch regelmäßige Reportings. Ich bin rundum zufrieden und kann Anna uneingeschränkt empfehlen – fachlich stark und menschlich wunderbar."
+            „Anna wurde mir genau zum richtigen Zeitpunkt empfohlen, als ich mich als Ernährungsberaterin selbstständig gemacht habe. Die Zusammenarbeit war von Anfang an eine echte Bereicherung …"
           </blockquote>
+          <button class="testi__more-btn" onclick="document.getElementById('modal-daniela-m').showModal()">Vollständige Bewertung lesen →</button>
           <div class="testi__author">
             <div class="testi__av" aria-hidden="true">D</div>
             <div>
@@ -605,11 +607,13 @@
           </div>
         </div>
 
+        <!-- Karte 2: Daniela Leopold-Kreisl -->
         <div class="testi">
           <div class="testi__stars" aria-label="5 Sterne">★★★★★</div>
           <blockquote class="testi__text">
-            „Ich bin sehr froh, Anna als Google-Ads-Expertin gefunden zu haben. Die Zusammenarbeit ist angenehm, offen, strukturiert und strategisch durchdacht. Anna versteht unser Business genau und entwickelt individuelle Lösungen statt Standardansätze. Klare Empfehlung für alle, die Google Ads professionell aufbauen möchten."
+            „Ich bin sehr froh, Anna als Google-Ads-Expertin gefunden zu haben. Die Zusammenarbeit ist angenehm, offen, strukturiert und strategisch durchdacht …"
           </blockquote>
+          <button class="testi__more-btn" onclick="document.getElementById('modal-daniela-l').showModal()">Vollständige Bewertung lesen →</button>
           <div class="testi__author">
             <div class="testi__av" aria-hidden="true">D</div>
             <div>
@@ -619,9 +623,86 @@
           </div>
         </div>
 
+        <!-- Karte 3: Ariane Nickusch -->
+        <div class="testi">
+          <div class="testi__stars" aria-label="5 Sterne">★★★★★</div>
+          <blockquote class="testi__text">
+            „Die Zusammenarbeit mit Anna war für mein Brautmodengeschäft eine echte Bereicherung. Anna hat mich über ein Jahr hinweg im Bereich Google Ads begleitet …"
+          </blockquote>
+          <button class="testi__more-btn" onclick="document.getElementById('modal-ariane').showModal()">Vollständige Bewertung lesen →</button>
+          <div class="testi__author">
+            <div class="testi__av" aria-hidden="true">A</div>
+            <div>
+              <p class="testi__name">Ariane Nickusch</p>
+              <p class="testi__role">Inhaberin Braut trifft Kleid</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
+
+  <!-- Modal: Daniela Müller -->
+  <dialog id="modal-daniela-m" class="testi-modal" onclick="if(event.target===this)this.close()">
+    <div class="testi-modal__inner">
+      <button class="testi-modal__close" onclick="document.getElementById('modal-daniela-m').close()" aria-label="Schließen">✕</button>
+      <div class="testi-modal__stars" aria-label="5 Sterne">★★★★★</div>
+      <blockquote class="testi-modal__text">
+        <p>„Anna wurde mir genau zum richtigen Zeitpunkt empfohlen, als ich mich als Ernährungsberaterin selbstständig gemacht habe. Die Zusammenarbeit war von Anfang an eine echte Bereicherung. Mit ihrer herzlichen, empathischen Art schafft sie sofort Vertrauen und bringt eine angenehme Leichtigkeit in den Prozess. Besonders überzeugt haben mich die professionelle Umsetzung meiner Google-Ads-Kampagne und Landingpage, ihre hohe Erreichbarkeit sowie die transparente, strukturierte Zusammenarbeit durch regelmäßige Reportings. Ich bin rundum zufrieden und kann Anna uneingeschränkt empfehlen – fachlich stark und menschlich wunderbar."</p>
+      </blockquote>
+      <div class="testi__author">
+        <div class="testi__av" aria-hidden="true">D</div>
+        <div>
+          <p class="testi__name">Daniela Müller</p>
+          <p class="testi__role">Ernährungsberatung Lebensgefühl</p>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Modal: Daniela Leopold-Kreisl -->
+  <dialog id="modal-daniela-l" class="testi-modal" onclick="if(event.target===this)this.close()">
+    <div class="testi-modal__inner">
+      <button class="testi-modal__close" onclick="document.getElementById('modal-daniela-l').close()" aria-label="Schließen">✕</button>
+      <div class="testi-modal__stars" aria-label="5 Sterne">★★★★★</div>
+      <blockquote class="testi-modal__text">
+        <p>„Ich bin sehr froh, Anna als Google-Ads-Expertin gefunden zu haben. Die Zusammenarbeit ist angenehm, offen, strukturiert und strategisch durchdacht. Anna versteht unser Business genau und entwickelt individuelle Lösungen statt Standardansätze. Klare Empfehlung für alle, die Google Ads professionell aufbauen möchten."</p>
+      </blockquote>
+      <div class="testi__author">
+        <div class="testi__av" aria-hidden="true">D</div>
+        <div>
+          <p class="testi__name">Daniela Leopold-Kreisl</p>
+          <p class="testi__role">Gründerin grillMODUL</p>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Modal: Ariane Nickusch -->
+  <dialog id="modal-ariane" class="testi-modal" onclick="if(event.target===this)this.close()">
+    <div class="testi-modal__inner">
+      <button class="testi-modal__close" onclick="document.getElementById('modal-ariane').close()" aria-label="Schließen">✕</button>
+      <div class="testi-modal__stars" aria-label="5 Sterne">★★★★★</div>
+      <blockquote class="testi-modal__text">
+        <p>„Die Zusammenarbeit mit Anna war für mein Brautmodengeschäft eine echte Bereicherung.</p>
+        <p>Anna hat mich über ein Jahr hinweg im Bereich Google Ads begleitet und dabei weit mehr geleistet, als nur Kampagnen zu erstellen. Sie hat sich intensiv mit meinem Business, meiner Zielgruppe und den Besonderheiten der Brautmodenbranche auseinandergesetzt. Auf dieser Basis hat sie durchdachte Google-Kampagnen entwickelt, die genau auf meine potenziellen Kundinnen zugeschnitten waren.</p>
+        <p>Besonders geschätzt habe ich ihre strategische Herangehensweise. Anna hat nicht einfach Anzeigen geschaltet, sondern gründlich recherchiert, analysiert und mir transparent aufgezeigt, welche Maßnahmen für mein Geschäft sinnvoll sind. Sie hat mich kompetent bei der Planung meines Werbebudgets beraten und nachvollziehbar erklärt, wann welche Investitionen sinnvoll sind und welche Ergebnisse realistisch erwartet werden können.</p>
+        <p>Ein großes Highlight waren die monatlichen Auswertungsgespräche. Anna hat mir jederzeit verständlich und transparent gezeigt, wie die Kampagnen performen, welche Anzeigen besonders gut funktionieren und an welchen Stellen Optimierungspotenzial besteht. Dadurch hatte ich stets das Gefühl, den Überblick zu behalten und fundierte Entscheidungen treffen zu können.</p>
+        <p>Was Anna jedoch besonders auszeichnet, ist die Art der Zusammenarbeit. Sie ist nicht nur eine fachlich starke Expertin, sondern auch eine unglaublich wertschätzende, zuverlässige und engagierte Sparringspartnerin. Oft hat sie mich auch über das Thema Google Ads hinaus unterstützt, wertvolle Impulse gegeben und mit ihrem Blick von außen geholfen, mein Business weiterzuentwickeln.</p>
+        <p>Unsere Zusammenarbeit war geprägt von Vertrauen, Offenheit, Herzlichkeit und echter Zusammenarbeit auf Augenhöhe. Gerade als eine ihrer ersten Kundinnen durfte ich erleben, mit wie viel Leidenschaft, Verantwortungsbewusstsein und persönlichem Einsatz Anna ihre Kundinnen begleitet.</p>
+        <p>Wer eine Google-Ads-Expertin sucht, die nicht nur Zahlen und Kampagnen versteht, sondern sich wirklich für den Erfolg ihrer Kundinnen interessiert, ist bei Anna genau richtig. Ich kann die Zusammenarbeit von Herzen empfehlen und würde jederzeit wieder mit ihr arbeiten.</p>
+        <p>Vielen Dank, liebe Anna, für deine Unterstützung, dein Engagement und die wunderbare Zusammenarbeit!"</p>
+      </blockquote>
+      <div class="testi__author">
+        <div class="testi__av" aria-hidden="true">A</div>
+        <div>
+          <p class="testi__name">Ariane Nickusch</p>
+          <p class="testi__role">Inhaberin Braut trifft Kleid</p>
+        </div>
+      </div>
+    </div>
+  </dialog>
 
 
   <!-- TRUST BAR (Vertrauen-Signale) -->
