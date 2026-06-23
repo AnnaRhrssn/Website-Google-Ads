@@ -1009,6 +1009,17 @@
         modal.addEventListener('click', function(e) {
           if (e.target === modal) modal.close();
         });
+        var txt = modal.querySelector('.testi-modal__text');
+        var startY = 0;
+        txt.addEventListener('touchstart', function(e) {
+          startY = e.touches[0].clientY;
+        }, { passive: true });
+        txt.addEventListener('touchmove', function(e) {
+          var dy = e.touches[0].clientY - startY;
+          var atTop = txt.scrollTop === 0 && dy > 0;
+          var atBottom = txt.scrollTop + txt.clientHeight >= txt.scrollHeight && dy < 0;
+          if (!atTop && !atBottom) e.stopPropagation();
+        }, { passive: true });
       });
     });
   </script>
