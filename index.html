@@ -989,12 +989,19 @@
 
   <script src="main.js"></script>
   <script>
+    var _scrollY = 0;
     function openModal(id) {
       var modal = document.getElementById(id);
       modal.showModal();
-      document.body.style.overflow = 'hidden';
+      _scrollY = window.scrollY;
+      document.body.style.position = 'fixed';
+      document.body.style.top = '-' + _scrollY + 'px';
+      document.body.style.width = '100%';
       modal.addEventListener('close', function() {
-        document.body.style.overflow = '';
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        window.scrollTo(0, _scrollY);
       }, { once: true });
     }
     document.addEventListener('DOMContentLoaded', function() {

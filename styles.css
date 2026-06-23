@@ -1166,10 +1166,11 @@ button { cursor: pointer; border: none; background: none; }
   font-weight: 300;
   margin-bottom: 28px;
   max-height: 50vh;
-  overflow-y: scroll;
-  overscroll-behavior: contain;
-  padding-right: 6px;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+  padding-right: 6px;
 }
 .testi-modal__text::-webkit-scrollbar { width: 3px; }
 .testi-modal__text::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
