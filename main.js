@@ -360,6 +360,17 @@ function initCookieBanner() {
   });
 }
 
+function initTestiDots() {
+  const grid = document.querySelector('.testi__grid--3');
+  const dots = document.querySelectorAll('.testi__dot');
+  if (!grid || !dots.length) return;
+
+  grid.addEventListener('scroll', () => {
+    const index = Math.round(grid.scrollLeft / grid.offsetWidth);
+    dots.forEach((d, i) => d.classList.toggle('testi__dot--active', i === index));
+  }, { passive: true });
+}
+
 /* ============================================
    BOOT
    ============================================ */
@@ -368,4 +379,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initPreloader();
   initNav();
   initPaketFlip();
+  initTestiDots();
 });

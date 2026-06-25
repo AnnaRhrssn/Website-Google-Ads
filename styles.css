@@ -1040,6 +1040,56 @@ button { cursor: pointer; border: none; background: none; }
     scroll-snap-align: start;
   }
 }
+
+/* Swipe-Hinweis — nur auf Mobil sichtbar */
+.testi__swipe-hint {
+  display: none;
+}
+@media (max-width: 767px) {
+  .testi__swipe-hint {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+  .testi__swipe-hint span {
+    font-size: 12px;
+    color: var(--text3);
+    letter-spacing: 0.04em;
+    animation: swipe-fade 3s ease forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+  }
+  @keyframes swipe-fade {
+    0%   { opacity: 0; }
+    20%  { opacity: 1; }
+    70%  { opacity: 1; }
+    100% { opacity: 0; }
+  }
+}
+
+/* Scroll-Dots — nur auf Mobil */
+.testi__dots {
+  display: none;
+}
+@media (max-width: 767px) {
+  .testi__dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  .testi__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--border);
+    transition: background .3s, transform .3s;
+  }
+  .testi__dot--active {
+    background: var(--accent);
+    transform: scale(1.25);
+  }
+}
 .testi {
   background: var(--white);
   border: 1px solid var(--border);
