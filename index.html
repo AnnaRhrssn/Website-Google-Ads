@@ -1007,6 +1007,7 @@
       document.body.style.width = '100%';
       modal.style.display = 'flex';
       modal.scrollTop = 0;
+      if (window.__lenis) window.__lenis.stop();
     }
 
     function closeModal(id) {
@@ -1016,6 +1017,7 @@
       document.body.style.top = '';
       document.body.style.width = '';
       window.scrollTo(0, _scrollY);
+      if (window.__lenis) window.__lenis.start();
     }
 
     document.addEventListener('DOMContentLoaded', function() {

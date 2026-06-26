@@ -1183,15 +1183,16 @@ button { cursor: pointer; border: none; background: none; }
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90vw;
-  max-width: 520px;
+  width: min(90vw, 520px);
   max-height: 80vh;
-  overflow-y: auto;
+  overflow-y: scroll;
   overflow-x: hidden;
+  scrollbar-width: none;
   z-index: 9001;
   padding: 40px 36px 32px;
   box-sizing: border-box;
 }
+.testi-modal__inner::-webkit-scrollbar { display: none; }
 .testi-modal__close {
   position: absolute;
   top: 16px; right: 20px;
