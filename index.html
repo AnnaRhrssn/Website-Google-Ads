@@ -999,8 +999,6 @@
   <script>
     var _scrollY = 0;
 
-    function _stopWheel(e) { e.stopPropagation(); }
-
     function openModal(id) {
       var modal = document.getElementById(id);
       var inner = modal.querySelector('.testi-modal__inner');
@@ -1010,22 +1008,18 @@
       document.body.style.width = '100%';
       modal.style.display = 'flex';
       inner.scrollTop = 0;
-      inner.addEventListener('wheel', _stopWheel, { passive: true });
-      inner.addEventListener('touchmove', _stopWheel, { passive: true });
-      if (window.__lenis) window.__lenis.stop();
+      inner.setAttribute('data-lenis-prevent', '');
     }
 
     function closeModal(id) {
       var modal = document.getElementById(id);
       var inner = modal.querySelector('.testi-modal__inner');
-      inner.removeEventListener('wheel', _stopWheel);
-      inner.removeEventListener('touchmove', _stopWheel);
+      inner.removeAttribute('data-lenis-prevent');
       modal.style.display = 'none';
       document.body.style.position = '';
       document.body.style.top = '';
       document.body.style.width = '';
       window.scrollTo(0, _scrollY);
-      if (window.__lenis) window.__lenis.start();
     }
 
     document.addEventListener('DOMContentLoaded', function() {
