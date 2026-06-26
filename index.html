@@ -999,19 +999,27 @@
   <script>
     var _scrollY = 0;
 
+    function _stopWheel(e) { e.stopPropagation(); }
+
     function openModal(id) {
       var modal = document.getElementById(id);
+      var inner = modal.querySelector('.testi-modal__inner');
       _scrollY = window.scrollY;
       document.body.style.position = 'fixed';
       document.body.style.top = '-' + _scrollY + 'px';
       document.body.style.width = '100%';
       modal.style.display = 'flex';
-      modal.scrollTop = 0;
+      inner.scrollTop = 0;
+      inner.addEventListener('wheel', _stopWheel, { passive: true });
+      inner.addEventListener('touchmove', _stopWheel, { passive: true });
       if (window.__lenis) window.__lenis.stop();
     }
 
     function closeModal(id) {
       var modal = document.getElementById(id);
+      var inner = modal.querySelector('.testi-modal__inner');
+      inner.removeEventListener('wheel', _stopWheel);
+      inner.removeEventListener('touchmove', _stopWheel);
       modal.style.display = 'none';
       document.body.style.position = '';
       document.body.style.top = '';
