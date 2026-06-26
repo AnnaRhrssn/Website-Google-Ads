@@ -1187,12 +1187,19 @@ button { cursor: pointer; border: none; background: none; }
   max-height: 80vh;
   overflow-y: scroll;
   overflow-x: hidden;
-  scrollbar-width: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+  scrollbar-gutter: stable;
   z-index: 9001;
   padding: 40px 36px 32px;
   box-sizing: border-box;
 }
-.testi-modal__inner::-webkit-scrollbar { display: none; }
+.testi-modal__inner::-webkit-scrollbar { width: 4px; }
+.testi-modal__inner::-webkit-scrollbar-track { background: transparent; }
+.testi-modal__inner::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 99px;
+}
 .testi-modal__close {
   position: absolute;
   top: 16px; right: 20px;
